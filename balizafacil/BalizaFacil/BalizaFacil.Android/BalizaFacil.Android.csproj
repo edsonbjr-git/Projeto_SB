@@ -58,8 +58,6 @@
     <AndroidLinkMode>Full</AndroidLinkMode>
     <AndroidSupportedAbis>
     </AndroidSupportedAbis>
-    <AndroidLinkSkip>
-    </AndroidLinkSkip>
     <EnableProguard>false</EnableProguard>
     <BundleAssemblies>false</BundleAssemblies>
     <AotAssemblies>false</AotAssemblies>
@@ -154,6 +152,9 @@
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
+    <None Include="keyStore\balizafacil.keyInfo" />
+    <None Include="keyStore\balizafacil.keystore" />
+    <None Include="keyStore\Senha.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -167,6 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\layout-land\" />
+    <Folder Include="keyStore\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\background_register.png" />

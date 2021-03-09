@@ -27,6 +27,8 @@ namespace BalizaFacil.Droid.Services
 
         public bool IsEnabled { get => BluetoothManager.Adapter.IsEnabled; }
 
+        public static List<BluetoothDevice> _devices { get; set; } = new List<BluetoothDevice>();
+
         public BluetoothService()
         {
             bluetoothActivate();
@@ -60,12 +62,12 @@ namespace BalizaFacil.Droid.Services
         public void UnPairedDevices()
         {
             BluetoothAdapter bluetoothAdapter = BluetoothAdapter.DefaultAdapter;
-            FlowManager.devices = new List<BluetoothDevice>();
+            _devices = new List<BluetoothDevice>();
             foreach (var bd in bluetoothAdapter.BondedDevices)
             {
                 if (bd.Name != Sensor.DefaultName)
                 {
-                    FlowManager.devices.Add(bd);
+                    _devices.Add(bd);
                     BluetoothDevice bluetoothDevice = bluetoothAdapter.GetRemoteDevice(bd.Address);
                     var mi = bluetoothDevice.Class.GetMethod("removeBond", null);
                     mi.Invoke(bluetoothDevice, null);
@@ -75,7 +77,7 @@ namespace BalizaFacil.Droid.Services
 
         public void pairDevice()
         {
-            List<BluetoothDevice> devices = FlowManager.devices;
+            List<BluetoothDevice> devices = _devices;
             BluetoothAdapter bluetoothAdapter = BluetoothAdapter.DefaultAdapter;
 
             foreach (var bd in devices)

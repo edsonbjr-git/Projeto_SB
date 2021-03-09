@@ -1528,7 +1528,7 @@
       ]
     },
     "Syncfusion.Licensing/16.4.0.54": {
-      "sha512": "iPdeYFNMXQ/K+bHtPh8Pfa55Yi4/ZsuKPjcuvxKwhqquF8/6rKmIH6iYYJ3Xhs1NpJRF+wyNNiXw5tyPaiNPZw==",
+      "sha512": "KpdQjjikdxf34gK4Q6edN31ZvUwTUh8Fgbbv0+/PVRG7U/PH0aQrmTCUXur53MzgFaxg0HeJxrS+hqqBTJ6z/A==",
       "type": "package",
       "path": "syncfusion.licensing/16.4.0.54",
       "files": [
@@ -1554,7 +1554,7 @@
       ]
     },
     "Syncfusion.Xamarin.Compression/16.4.0.54": {
-      "sha512": "mm4np3sk3q+CMuoWy6z4IRJJSVpNDiN19GEn78nxFrnBNPtrMGTul9EMC+6wLgNSjEiHmOI/s3VyCeo977YnWw==",
+      "sha512": "LCPsX8cD2nPH47W3PiNuH5YMxrSfA3Ap/JCJcGgfczIE/nTira8ep079b71ahfXgP5GXI32maiOMyrx4/5PI/Q==",
       "type": "package",
       "path": "syncfusion.xamarin.compression/16.4.0.54",
       "files": [
@@ -1573,7 +1573,7 @@
       ]
     },
     "Syncfusion.Xamarin.Pdf/16.4.0.54": {
-      "sha512": "zs8l/tdKWeCKwVX1GeZwBQSP0TjPbnclsf+KS7zNaNezzwlaOrukGToS1x5wjw+yjL+9RpS6fMkcfFB6ouasSw==",
+      "sha512": "fTC3dQHEnhw9aLoNu1Vzv4ZlW6TC0MFNcotN+j4ylXad5Bczor0yfYz6pEKgpeM1n8hY+VV0gzhZh8kjhpKN6w==",
       "type": "package",
       "path": "syncfusion.xamarin.pdf/16.4.0.54",
       "files": [
@@ -2977,39 +2977,33 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sergi\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/iegamerica/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\BalizaBitBucket_AjusteMov\\balizafacil\\BalizaFacil\\BalizaFacil\\BalizaFacil.Android\\BalizaFacil.Android.csproj",
+      "projectUniqueName": "/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/BalizaFacil.Android/BalizaFacil.Android.csproj",
       "projectName": "BalizaFacil.Android",
-      "projectPath": "C:\\BalizaBitBucket_AjusteMov\\balizafacil\\BalizaFacil\\BalizaFacil\\BalizaFacil.Android\\BalizaFacil.Android.csproj",
-      "packagesPath": "C:\\Users\\sergi\\.nuget\\packages\\",
-      "outputPath": "C:\\BalizaBitBucket_AjusteMov\\balizafacil\\BalizaFacil\\BalizaFacil\\BalizaFacil.Android\\obj\\",
+      "projectPath": "/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/BalizaFacil.Android/BalizaFacil.Android.csproj",
+      "packagesPath": "/Users/iegamerica/.nuget/packages/",
+      "outputPath": "/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/BalizaFacil.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sergi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/iegamerica/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid90"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://ieg-america.pkgs.visualstudio.com/_packaging/ieg-package-feed/nuget/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\BalizaBitBucket_AjusteMov\\balizafacil\\BalizaFacil\\BalizaFacil\\BalizaFacil\\BalizaFacil.csproj": {
-              "projectPath": "C:\\BalizaBitBucket_AjusteMov\\balizafacil\\BalizaFacil\\BalizaFacil\\BalizaFacil\\BalizaFacil.csproj"
+            "/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/BalizaFacil/BalizaFacil.csproj": {
+              "projectPath": "/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/BalizaFacil/BalizaFacil.csproj"
             }
           }
         }
@@ -3095,7 +3089,17 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Downgrade de pacote detectado: ZXing.Net.Mobile de 2.4.1 para 2.3.2. Referencie o pacote diretamente do projeto para selecionar uma versão diferente. \r\n BalizaFacil.Android -> BalizaFacil -> ZXing.Net.Mobile (>= 2.4.1) \r\n BalizaFacil.Android -> ZXing.Net.Mobile (>= 2.3.2)",
+      "message": "Detected package downgrade: Syncfusion.Xamarin.Pdf from 18.1.0.55 to 16.4.0.54. Reference the package directly from the project to select a different version. \n BalizaFacil.Android -> BalizaFacil -> Syncfusion.Xamarin.Pdf (>= 18.1.0.55) \n BalizaFacil.Android -> Syncfusion.Xamarin.Pdf (>= 16.4.0.54)",
+      "libraryId": "Syncfusion.Xamarin.Pdf",
+      "targetGraphs": [
+        "MonoAndroid,Version=v9.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: ZXing.Net.Mobile from 2.4.1 to 2.3.2. Reference the package directly from the project to select a different version. \n BalizaFacil.Android -> BalizaFacil -> ZXing.Net.Mobile (>= 2.4.1) \n BalizaFacil.Android -> ZXing.Net.Mobile (>= 2.3.2)",
       "libraryId": "ZXing.Net.Mobile",
       "targetGraphs": [
         "MonoAndroid,Version=v9.0"
@@ -3105,18 +3109,8 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Downgrade de pacote detectado: ZXing.Net.Mobile.Forms de 2.4.1 para 2.3.2. Referencie o pacote diretamente do projeto para selecionar uma versão diferente. \r\n BalizaFacil.Android -> BalizaFacil -> ZXing.Net.Mobile.Forms (>= 2.4.1) \r\n BalizaFacil.Android -> ZXing.Net.Mobile.Forms (>= 2.3.2)",
+      "message": "Detected package downgrade: ZXing.Net.Mobile.Forms from 2.4.1 to 2.3.2. Reference the package directly from the project to select a different version. \n BalizaFacil.Android -> BalizaFacil -> ZXing.Net.Mobile.Forms (>= 2.4.1) \n BalizaFacil.Android -> ZXing.Net.Mobile.Forms (>= 2.3.2)",
       "libraryId": "ZXing.Net.Mobile.Forms",
-      "targetGraphs": [
-        "MonoAndroid,Version=v9.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Downgrade de pacote detectado: Syncfusion.Xamarin.Pdf de 18.1.0.55 para 16.4.0.54. Referencie o pacote diretamente do projeto para selecionar uma versão diferente. \r\n BalizaFacil.Android -> BalizaFacil -> Syncfusion.Xamarin.Pdf (>= 18.1.0.55) \r\n BalizaFacil.Android -> Syncfusion.Xamarin.Pdf (>= 16.4.0.54)",
-      "libraryId": "Syncfusion.Xamarin.Pdf",
       "targetGraphs": [
         "MonoAndroid,Version=v9.0"
       ]

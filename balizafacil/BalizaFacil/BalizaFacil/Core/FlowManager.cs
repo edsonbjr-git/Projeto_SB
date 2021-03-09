@@ -8,14 +8,14 @@ using Xamarin.Forms;
 using BalizaFacil.Utils;
 using BalizaFacil.UI;
 using System.Collections.Generic;
-using  Android.Bluetooth;
+//using  Android.Bluetooth;
 
 namespace BalizaFacil.Core
 {
     public class FlowManager
     {
 
-        public static List<BluetoothDevice> devices { get; set; }
+        //public static List<BluetoothDevice> devices { get; set; }
         private static FlowManager instance { get; set; }
         public static FlowManager Instance
         {
@@ -82,7 +82,7 @@ namespace BalizaFacil.Core
         public void Start(App app)
         {
 
-            devices = new List<BluetoothDevice>();
+            //devices = new List<BluetoothDevice>();
             App = app;
             MainPage = BaseContentPage.Instance;
             app.MainPage = MainPage;
