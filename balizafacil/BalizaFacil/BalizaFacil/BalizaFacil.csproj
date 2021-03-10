@@ -4,9 +4,6 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
     
-    <Target Name="Restore">
-  <MSBuild Projects="$(SourcesPath)\BalizaFacil.sln" Targets="Restore" />
-</Target>
     
   <ItemGroup>
     <Compile Remove="Historico\**" />

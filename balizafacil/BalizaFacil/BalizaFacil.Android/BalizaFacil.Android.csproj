@@ -97,7 +97,7 @@
       <Version>2.1.6.2</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.Pdf">
-      <Version>16.4.0.54</Version>
+      <Version>18.1.0.55</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugin.SimpleAudioPlayer">
       <Version>1.0.2</Version>
@@ -120,10 +120,10 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.GooglePlayServices.Location" Version="71.1600.1" />
     <PackageReference Include="ZXing.Net.Mobile">
-      <Version>2.3.2</Version>
+      <Version>2.4.1</Version>
     </PackageReference>
     <PackageReference Include="ZXing.Net.Mobile.Forms">
-      <Version>2.3.2</Version>
+      <Version>2.4.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
