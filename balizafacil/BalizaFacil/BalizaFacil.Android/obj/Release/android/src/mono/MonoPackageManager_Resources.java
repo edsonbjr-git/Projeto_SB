@@ -3,7 +3,6 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "BalizaFacil.Android.dll" comes first in this list. */
 		"BalizaFacil.Android.dll",
-		"BalizaFacil.dll",
 		"FastAndroidCamera.dll",
 		"FormsViewGroup.dll",
 		"Newtonsoft.Json.dll",
@@ -73,6 +72,7 @@ public class MonoPackageManager_Resources {
 		"ZXing.Net.Mobile.Forms.dll",
 		"zxing.portable.dll",
 		"ZXingNetMobile.dll",
+		"BalizaFacil.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};
