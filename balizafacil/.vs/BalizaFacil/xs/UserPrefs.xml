@@ -4,7 +4,10 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BalizaFacil" expanded="True">
-            <Node name="BalizaFacil" selected="True" />
+            <Node name="BalizaFacil" expanded="True">
+              <Node name="App.cs" selected="True" />
+            </Node>
+            <Node name="BalizaFacil.Android" expanded="True" />
           </Node>
         </State>
       </Pad>
