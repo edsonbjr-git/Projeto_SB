@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "dgSpecHash": "xTdDO00pnS/Pltmk3nSsbrtTbBHAhj8k0nbupl1+25pCM7xHTkx4G5DY6B4rWULM2w0PbTv2tB9g+TB4zgv85w==",
+  "success": true,
+  "projectFilePath": "/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/BalizaFacil.iOS/BalizaFacil.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/iegamerica/.nuget/packages/facebook.yoga/1.5.0-pre1/facebook.yoga.1.5.0-pre1.nupkg.sha512",
+    "/Users/iegamerica/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
+    "/Users/iegamerica/.nuget/packages/skiasharp/1.68.3/skiasharp.1.68.3.nupkg.sha512",
+    "/Users/iegamerica/.nuget/packages/skiasharp.components/0.7.2/skiasharp.components.0.7.2.nupkg.sha512",
+    "/Users/iegamerica/.nuget/packages/skiasharp.components.layout/0.6.0/skiasharp.components.layout.0.6.0.nupkg.sha512",
+    "/Users/iegamerica/.nuget/packages/skiasharp.extended/1.60.0/skiasharp.extended.1.60.0.nupkg.sha512",
+    "/Users/iegamerica/.nuget/packages/skiasharp.svg/1.60.0/skiasharp.svg.1.60.0.nupkg.sha512",
+    "/Users/iegamerica/.nuget/packages/skiasharp.views/1.68.3/skiasharp.views.1.68.3.nupkg.sha512",
+    "/Users/iegamerica/.nuget/packages/skiasharp.views.forms/1.68.3/skiasharp.views.forms.1.68.3.nupkg.sha512",
+    "/Users/iegamerica/.nuget/packages/slideoverkit/2.1.6.2/slideoverkit.2.1.6.2.nupkg.sha512",
+    "/Users/iegamerica/.nuget/packages/syncfusion.licensing/16.4.0.54/syncfusion.licensing.16.4.0.54.nupkg.sha512",
+    "/Users/iegamerica/.nuget/packages/syncfusion.xamarin.compression/16.4.0.54/syncfusion.xamarin.compression.16.4.0.54.nupkg.sha512",
+    "/Users/iegamerica/.nuget/packages/syncfusion.xamarin.pdf/16.4.0.54/syncfusion.xamarin.pdf.16.4.0.54.nupkg.sha512",
+    "/Users/iegamerica/.nuget/packages/xam.plugin.simpleaudioplayer/1.1.0/xam.plugin.simpleaudioplayer.1.1.0.nupkg.sha512",
+    "/Users/iegamerica/.nuget/packages/xam.plugins.settings/3.1.1/xam.plugins.settings.3.1.1.nupkg.sha512",
+    "/Users/iegamerica/.nuget/packages/xamarin.essentials/1.5.3.2/xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "/Users/iegamerica/.nuget/packages/xamarin.forms/4.6.0.847/xamarin.forms.4.6.0.847.nupkg.sha512",
+    "/Users/iegamerica/.nuget/packages/zxing.net.mobile/2.4.1/zxing.net.mobile.2.4.1.nupkg.sha512",
+    "/Users/iegamerica/.nuget/packages/zxing.net.mobile.forms/2.4.1/zxing.net.mobile.forms.2.4.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Syncfusion.Xamarin.Pdf from 18.1.0.55 to 16.4.0.54. Reference the package directly from the project to select a different version. \n BalizaFacil.iOS -> BalizaFacil -> Syncfusion.Xamarin.Pdf (>= 18.1.0.55) \n BalizaFacil.iOS -> Syncfusion.Xamarin.Pdf (>= 16.4.0.54)",
+      "libraryId": "Syncfusion.Xamarin.Pdf",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
+}
