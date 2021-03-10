@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalizaFacil.Android", "Bali
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalizaFacil.iOS", "BalizaFacil\BalizaFacil.iOS\BalizaFacil.iOS.csproj", "{C4880A5E-50E3-4358-AD8C-A17B2DC03F35}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BalizaFacil", "BalizaFacil\BalizaFacil\BalizaFacil.csproj", "{EF256A2D-C87E-4D08-A50A-3081C3102BB6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalizaFacil", "BalizaFacil\BalizaFacil\BalizaFacil.csproj", "{EF256A2D-C87E-4D08-A50A-3081C3102BB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
