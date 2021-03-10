@@ -3,9 +3,9 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CD867BA3-F8B9-4449-AC04-38A67C9E9660}</ProjectGuid>
+    <ProjectGuid>{2FCBB7EB-3775-4DA9-BD9C-CAB26A4E122F}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
+    <TemplateGuid>{6968b3a4-1835-46a3-ac5c-1ae33b475983}</TemplateGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>BalizaFacil.Droid</RootNamespace>
     <AssemblyName>BalizaFacil.Android</AssemblyName>
@@ -169,7 +169,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\layout-land\" />
-    <Folder Include="keyStore\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\background_register.png" />
