@@ -4,10 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
     
-    <PropertyGroup>
-    <RestoreFallbackFolders>clear</RestoreFallbackFolders>
-  </PropertyGroup>
-
+    
   <ItemGroup>
     <Compile Remove="Historico\**" />
     <EmbeddedResource Remove="Historico\**" />
