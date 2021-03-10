@@ -1,10 +1,23 @@
 ﻿<Properties StartupConfiguration="{2FCBB7EB-3775-4DA9-BD9C-CAB26A4E122F}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil/BalizaFacil/Screens/ReportView/ReportsViewModel.cs">
+    <Files>
+      <File FileName="BalizaFacil/BalizaFacil/Screens/ReportView/ReportsViewModel.cs" Line="5" Column="7" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BalizaFacil" expanded="True">
-            <Node name="BalizaFacil" selected="True" />
+            <Node name="BalizaFacil" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+                <Node name="SdkDependencies" expanded="True" />
+              </Node>
+              <Node name="Screens" expanded="True">
+                <Node name="ReportView" expanded="True">
+                  <Node name="ReportsViewModel.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>

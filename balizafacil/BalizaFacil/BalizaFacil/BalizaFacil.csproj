@@ -167,7 +167,6 @@
     <EmbeddedResource Include="Resources\Audio\StartingLeft.m4a" />
     <EmbeddedResource Include="Resources\Audio\StartingRight.m4a" />
     <EmbeddedResource Include="Resources\Audio\SensorConnected.m4a">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Audio\Stop.m4a" />
     <EmbeddedResource Include="Resources\Audio\ThreeMetters.m4a" />
@@ -231,11 +230,11 @@
     <PackageReference Include="SkiaSharp.Svg" Version="1.60.0" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.3" />
     <PackageReference Include="SlideOverKit" Version="2.1.6.2" />
-    <PackageReference Include="Syncfusion.Xamarin.Pdf" Version="18.1.0.55" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.847" />
     <PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
     <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
+    <PackageReference Include="Syncfusion.Xamarin.Pdf" Version="18.1.0.55" />
   </ItemGroup>
 
   <ItemGroup>
