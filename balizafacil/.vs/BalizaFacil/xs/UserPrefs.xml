@@ -1,12 +1,22 @@
-﻿<Properties StartupConfiguration="{2FCBB7EB-3775-4DA9-BD9C-CAB26A4E122F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil/BalizaFacil/BalizaFacil.csproj">
+﻿<Properties StartupConfiguration="{CD867BA3-F8B9-4449-AC04-38A67C9E9660}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil/BalizaFacil.Android/Services/Utils/UtilsService.cs">
     <Files>
-      <File FileName="BalizaFacil/BalizaFacil/BalizaFacil.csproj" Line="6" Column="5" />
+      <File FileName="BalizaFacil/BalizaFacil.Android/Services/Utils/UtilsService.cs" Line="78" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="BalizaFacil" expanded="True" selected="True" />
+          <Node name="BalizaFacil" expanded="True">
+            <Node name="BalizaFacil.Android" expanded="True">
+              <Node name="Assets" expanded="True" />
+              <Node name="keyStore" expanded="True">
+                <Node name="balizafacil.keyInfo" selected="True" />
+              </Node>
+              <Node name="Services" expanded="True">
+                <Node name="Utils" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
@@ -15,7 +25,7 @@
   <DisabledProjects>
     <String>BalizaFacil/BalizaFacil.iOS/BalizaFacil.iOS.csproj</String>
   </DisabledProjects>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.BalizaFacil.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
