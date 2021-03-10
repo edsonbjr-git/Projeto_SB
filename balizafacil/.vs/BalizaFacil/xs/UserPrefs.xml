@@ -3,7 +3,9 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="BalizaFacil" expanded="True" selected="True" />
+          <Node name="BalizaFacil" expanded="True">
+            <Node name="BalizaFacil" selected="True" />
+          </Node>
         </State>
       </Pad>
     </Pads>
