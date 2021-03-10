@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.30128.74
-MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalizaFacil.Android", "BalizaFacil\BalizaFacil.Android\BalizaFacil.Android.csproj", "{2FCBB7EB-3775-4DA9-BD9C-CAB26A4E122F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalizaFacil.iOS", "BalizaFacil\BalizaFacil.iOS\BalizaFacil.iOS.csproj", "{C4880A5E-50E3-4358-AD8C-A17B2DC03F35}"
@@ -133,11 +131,5 @@ Global
 		{EF256A2D-C87E-4D08-A50A-3081C3102BB6}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{EF256A2D-C87E-4D08-A50A-3081C3102BB6}.Release|x64.ActiveCfg = Release|Any CPU
 		{EF256A2D-C87E-4D08-A50A-3081C3102BB6}.Release|x64.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5F7DC064-1CA7-4A37-AFA8-9A3B2364B141}
 	EndGlobalSection
 EndGlobal
