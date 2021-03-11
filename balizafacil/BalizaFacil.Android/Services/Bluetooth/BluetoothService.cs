@@ -25,7 +25,20 @@ namespace BalizaFacil.Droid.Services
         private ScanCallback ScanCallback { get; set; }
         private BluetoothDevice Device { get; set; }
 
-        public bool IsEnabled { get => BluetoothManager.Adapter.IsEnabled; }
+        public bool IsEnabled
+        {
+            get
+            {
+                try
+                {
+                   return BluetoothManager.Adapter.IsEnabled;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+        }
 
         public static List<BluetoothDevice> _devices { get; set; } = new List<BluetoothDevice>();
 

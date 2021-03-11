@@ -74,7 +74,8 @@ namespace BalizaFacil.Droid
                 catch (System.Exception ex)
                 {
                     string title = this.GetType().Name + " - " + System.Reflection.MethodBase.GetCurrentMethod().Name;
-                    BalizaFacil.App.Instance.UnhandledException(title, ex);
+                    if (BalizaFacil.App.Instance != null)
+                        BalizaFacil.App.Instance.UnhandledException(title, ex);
                 }
             });
             TurnOnAndConnect.Priority = System.Threading.ThreadPriority.Highest;

@@ -1,15 +1,25 @@
 ﻿<Properties StartupConfiguration="{7D569D7B-179C-42AF-BC5E-5C0B66DB1C0A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil/UI/CustomComponentes/Icon.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil/App.xaml.cs">
     <Files>
-      <File FileName="BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" Line="51" Column="36" />
-      <File FileName="BalizaFacil/App.xaml.cs" />
+      <File FileName="BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" Line="33" Column="1" />
+      <File FileName="BalizaFacil/App.xaml.cs" Line="17" Column="1" />
       <File FileName="BalizaFacil/UI/CustomComponentes/Icon.cs" Line="31" Column="16" />
+      <File FileName="BalizaFacil.Android/MainActivity.cs" Line="78" Column="58" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BalizaFacil" expanded="True">
-            <Node name="BalizaFacil.Android" expanded="True" selected="True" />
+            <Node name="BalizaFacil" expanded="True">
+              <Node name="App.xaml" expanded="True">
+                <Node name="App.xaml.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="BalizaFacil.Android" expanded="True">
+              <Node name="Services" expanded="True">
+                <Node name="Bluetooth" expanded="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -19,11 +29,13 @@
   <DisabledProjects>
     <String>BalizaFacil.iOS/BalizaFacil.iOS.csproj</String>
   </DisabledProjects>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.ItemProperties.BalizaFacil.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.42e6e2bfbad9c818" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.BalizaFacil.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/UI/CustomComponentes/Icon.cs" relfile="BalizaFacil/UI/CustomComponentes/Icon.cs" line="71" column="1" />
+      <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/App.xaml.cs" relfile="BalizaFacil/App.xaml.cs" line="17" column="1" />
+      <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" relfile="BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" line="33" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
