@@ -2,25 +2,14 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil/UI/CustomComponentes/Icon.cs">
     <Files>
       <File FileName="BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" Line="51" Column="36" />
-      <File FileName="BalizaFacil/App.xaml.cs" Line="22" Column="21" />
+      <File FileName="BalizaFacil/App.xaml.cs" />
       <File FileName="BalizaFacil/UI/CustomComponentes/Icon.cs" Line="31" Column="16" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BalizaFacil" expanded="True">
-            <Node name="BalizaFacil" expanded="True" selected="True">
-              <Node name="Resources" expanded="True">
-                <Node name="Icons" expanded="True" />
-              </Node>
-              <Node name="UI" expanded="True">
-                <Node name="CustomComponentes" expanded="True" />
-              </Node>
-              <Node name="App.xaml" expanded="True" />
-            </Node>
-            <Node name="BalizaFacil.Android" expanded="True">
-              <Node name="CustomRenderers" expanded="True" />
-            </Node>
+            <Node name="BalizaFacil.Android" expanded="True" selected="True" />
           </Node>
         </State>
       </Pad>
