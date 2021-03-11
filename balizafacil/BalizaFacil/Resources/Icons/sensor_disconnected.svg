@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2146.241 7056.762 352.536 352.525">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00d2fc;
+      }
+
+      .cls-2 {
+        fill: #00d3fc;
+      }
+    </style>
+  </defs>
+  <g id="Group_6339" data-name="Group 6339" transform="translate(-2298.242 6845.762)">
+    <g id="Group_6338" data-name="Group 6338" transform="translate(152.001 211)">
+      <g id="bluetooth_off" data-name="bluetooth off" transform="translate(100.777 79.427)">
+        <g id="bluetooth-disabled">
+          <path id="Path_2971" data-name="Path 2971" class="cls-1" d="M136.371,36.046l18.023,18.023L139.217,69.246l13.28,13.28,28.457-28.457L126.886,0H117.4V47.429L136.371,66.4ZM64.28,18.971,51,32.251l62.606,62.606-53.12,53.12,13.28,13.28L117.4,117.623v72.091h9.486l40.789-40.789,21.817,21.817,13.28-13.28Zm72.091,134.7V117.623l18.023,18.023Z" transform="translate(-51)"/>
+        </g>
+      </g>
+      <g id="Group_4660" data-name="Group 4660" transform="translate(0 0)">
+        <g id="cancel" transform="translate(0 0)">
+          <path id="Path_2866" data-name="Path 2866" class="cls-2" d="M176.268,0A176.262,176.262,0,1,0,352.536,176.261,176.26,176.26,0,0,0,176.268,0Zm0,319.475A143.218,143.218,0,1,1,319.485,176.261,143.213,143.213,0,0,1,176.268,319.479Z" transform="translate(0 -0.004)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

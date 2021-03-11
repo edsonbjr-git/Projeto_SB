@@ -1,0 +1,12 @@
+﻿<linker>
+  <assembly fullname="SkiaSharp.Components.Layout">
+    <type fullname="Layout" preserve="fields">
+      <method name="Apply"></method>
+    </type>
+  </assembly>
+  <!--<assembly fullname="SkiaSharp.Views.Forms">
+    <type fullname="SkiaSharp.Views.Forms.SKCanvasView" preserve="all">
+      <method name=".ctor" />
+    </type>
+  </assembly>-->
+</linker>
