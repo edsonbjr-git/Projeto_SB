@@ -3,23 +3,14 @@
     <Files>
       <File FileName="BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" Line="33" Column="1" />
       <File FileName="BalizaFacil/App.xaml.cs" Line="17" Column="1" />
-      <File FileName="BalizaFacil/UI/CustomComponentes/Icon.cs" Line="31" Column="16" />
-      <File FileName="BalizaFacil.Android/MainActivity.cs" Line="78" Column="58" />
+      <File FileName="BalizaFacil/UI/CustomComponentes/Icon.cs" />
+      <File FileName="BalizaFacil.Android/MainActivity.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BalizaFacil" expanded="True">
-            <Node name="BalizaFacil" expanded="True">
-              <Node name="App.xaml" expanded="True">
-                <Node name="App.xaml.cs" selected="True" />
-              </Node>
-            </Node>
-            <Node name="BalizaFacil.Android" expanded="True">
-              <Node name="Services" expanded="True">
-                <Node name="Bluetooth" expanded="True" />
-              </Node>
-            </Node>
+            <Node name="BalizaFacil.Android" selected="True" />
           </Node>
         </State>
       </Pad>
