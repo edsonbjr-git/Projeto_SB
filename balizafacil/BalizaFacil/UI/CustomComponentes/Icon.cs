@@ -37,6 +37,8 @@ namespace BalizaFacil.UI
                 if (string.IsNullOrWhiteSpace(FileName))
                     return;
 
+                var aa = GetType().Assembly.GetManifestResourceNames();
+
                 using (Stream stream = GetType().Assembly.GetManifestResourceStream($"BalizaFacil.Resources.Icons.{FileName}"))
                 using (SKPaint paint = new SKPaint() { ColorFilter = SKColorFilter.CreateBlendMode(Color.ToSKColor(), SKBlendMode.SrcIn) })
                 {
