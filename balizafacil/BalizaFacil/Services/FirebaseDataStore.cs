@@ -16,12 +16,12 @@ namespace BalizaFacil.Services
 
         public FirebaseDataStore(FirebaseAuthService authService, string path)
         {
-            FirebaseOptions options = new FirebaseOptions()
+            /*FirebaseOptions options = new FirebaseOptions()
             {
                 AuthTokenAsyncFactory = async () => await authService.GetFirebaseAuthToken()
-            };
+            };*/
 
-            _query = new FirebaseClient(BaseUrl, options).Child(path);
+            _query = new FirebaseClient(BaseUrl).Child(path);
         }
 
         public async Task<bool> AddItemAsync(T item)

@@ -1,14 +1,30 @@
 ﻿<Properties StartupConfiguration="{7D569D7B-179C-42AF-BC5E-5C0B66DB1C0A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil.Android/MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil/Library/LogAppCenter.cs">
     <Files>
-      <File FileName="BalizaFacil.Android/MainActivity.cs" Line="91" Column="1" />
+      <File FileName="BalizaFacil/App.xaml.cs" Line="37" Column="56" />
+      <File FileName="BalizaFacil/Core/FlowManager.cs" Line="77" Column="63" />
+      <File FileName="BalizaFacil/Services/FirebaseAuthService.cs" Line="40" Column="45" />
+      <File FileName="BalizaFacil/Services/Services.cs" Line="19" Column="1" />
+      <File FileName="BalizaFacil/Screens/BaseContentPage.cs" Line="179" Column="1" />
+      <File FileName="BalizaFacil/Library/LogAppCenter.cs" Line="51" Column="56" />
+      <File FileName="BalizaFacil/Services/FirebaseDataStore.cs" Line="36" Column="1" />
+      <File FileName="BalizaFacil.Android/MainActivity.cs" Line="67" Column="11" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BalizaFacil" expanded="True">
+            <Node name="BalizaFacil" expanded="True">
+              <Node name="Core" expanded="True" />
+              <Node name="Library" expanded="True">
+                <Node name="LogAppCenter.cs" selected="True" />
+              </Node>
+              <Node name="Screens" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
+            </Node>
             <Node name="BalizaFacil.Android" expanded="True">
-              <Node name="MainActivity.cs" selected="True" />
+              <Node name="Packages" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -20,18 +36,17 @@
     <String>BalizaFacil.iOS/BalizaFacil.iOS.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.BalizaFacil.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.ItemProperties.BalizaFacil.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.42e6e2bfbad9c818" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/UI/CustomComponentes/Icon.cs" relfile="BalizaFacil/UI/CustomComponentes/Icon.cs" line="71" column="1" />
-      <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/Library/LogAppCenter.cs" relfile="BalizaFacil/Library/LogAppCenter.cs" line="33" column="1" />
       <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/Library/LogAppCenter.cs" relfile="BalizaFacil/Library/LogAppCenter.cs" line="60" column="1" />
       <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/Library/LogAppCenter.cs" relfile="BalizaFacil/Library/LogAppCenter.cs" line="64" column="1" />
       <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/Library/LogAppCenter.cs" relfile="BalizaFacil/Library/LogAppCenter.cs" line="68" column="1" />
       <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/Library/LogAppCenter.cs" relfile="BalizaFacil/Library/LogAppCenter.cs" line="72" column="1" />
-      <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil.Android/MainActivity.cs" relfile="BalizaFacil.Android/MainActivity.cs" line="50" column="1" />
       <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/Library/LogAppCenter.cs" relfile="BalizaFacil/Library/LogAppCenter.cs" line="51" column="1" />
       <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/Services/FirebaseDataStore.cs" relfile="BalizaFacil/Services/FirebaseDataStore.cs" line="36" column="1" />
+      <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/Core/FlowManager.cs" relfile="BalizaFacil/Core/FlowManager.cs" line="96" column="1" />
       <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/Services/FirebaseAuthService.cs" relfile="BalizaFacil/Services/FirebaseAuthService.cs" line="25" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

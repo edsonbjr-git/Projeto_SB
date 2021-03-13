@@ -87,7 +87,16 @@ namespace BalizaFacil.Core
             MainPage = BaseContentPage.Instance;
             app.MainPage = MainPage;
             MainPage.BackButtonPressed += OnBackButtonPressed;
-            Car = Storage.Car;
+
+            try
+            {
+                Car = Storage.Car;
+            }
+            catch(Exception ef)
+            {
+
+            }
+
             globalPlaying = VoiceType.None;
             totalSteps = 5;
             if (Car is null || string.IsNullOrWhiteSpace(Storage.Address))

@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using Android.Media;
 using Android;
 using Xamarin.Essentials;
+using Firebase;
 
 namespace BalizaFacil.Droid
 {
@@ -61,7 +62,9 @@ namespace BalizaFacil.Droid
             App.BluetoothStartedEnabled = bluetooth.IsEnabled;
             Location.RequestEnableGPS();
 
-            
+            var a = FirebaseApp.InitializeApp(this);
+
+          
 
             player = MediaPlayer.Create(this, Resource.Raw.Stop);
             Thread TurnOnAndConnect = new Thread(() =>
