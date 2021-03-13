@@ -1,16 +1,15 @@
 ﻿<Properties StartupConfiguration="{7D569D7B-179C-42AF-BC5E-5C0B66DB1C0A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil/App.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil.Android/MainActivity.cs">
     <Files>
-      <File FileName="BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" Line="33" Column="1" />
-      <File FileName="BalizaFacil/App.xaml.cs" Line="17" Column="1" />
-      <File FileName="BalizaFacil/UI/CustomComponentes/Icon.cs" />
-      <File FileName="BalizaFacil.Android/MainActivity.cs" />
+      <File FileName="BalizaFacil.Android/MainActivity.cs" Line="91" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BalizaFacil" expanded="True">
-            <Node name="BalizaFacil.Android" selected="True" />
+            <Node name="BalizaFacil.Android" expanded="True">
+              <Node name="MainActivity.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -25,8 +24,15 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/UI/CustomComponentes/Icon.cs" relfile="BalizaFacil/UI/CustomComponentes/Icon.cs" line="71" column="1" />
-      <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/App.xaml.cs" relfile="BalizaFacil/App.xaml.cs" line="17" column="1" />
-      <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" relfile="BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" line="33" column="1" />
+      <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/Library/LogAppCenter.cs" relfile="BalizaFacil/Library/LogAppCenter.cs" line="33" column="1" />
+      <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/Library/LogAppCenter.cs" relfile="BalizaFacil/Library/LogAppCenter.cs" line="60" column="1" />
+      <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/Library/LogAppCenter.cs" relfile="BalizaFacil/Library/LogAppCenter.cs" line="64" column="1" />
+      <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/Library/LogAppCenter.cs" relfile="BalizaFacil/Library/LogAppCenter.cs" line="68" column="1" />
+      <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/Library/LogAppCenter.cs" relfile="BalizaFacil/Library/LogAppCenter.cs" line="72" column="1" />
+      <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil.Android/MainActivity.cs" relfile="BalizaFacil.Android/MainActivity.cs" line="50" column="1" />
+      <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/Library/LogAppCenter.cs" relfile="BalizaFacil/Library/LogAppCenter.cs" line="51" column="1" />
+      <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/Services/FirebaseDataStore.cs" relfile="BalizaFacil/Services/FirebaseDataStore.cs" line="36" column="1" />
+      <Breakpoint file="/Users/iegamerica/Projects/Aplicativo_BalizaFacil/balizafacil/BalizaFacil/Services/FirebaseAuthService.cs" relfile="BalizaFacil/Services/FirebaseAuthService.cs" line="25" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

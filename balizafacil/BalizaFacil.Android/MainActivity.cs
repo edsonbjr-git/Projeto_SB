@@ -12,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Android.Media;
 using Android;
+using Xamarin.Essentials;
 
 namespace BalizaFacil.Droid
 {
@@ -45,10 +46,12 @@ namespace BalizaFacil.Droid
                     await Location.RequestEnableGPS();
                 }
             }
+
+            await CheckAndRequestLocationPermission();
         }
 
 
-        protected override void OnCreate(Bundle bundle)
+        protected async override void OnCreate(Bundle bundle)
         {
 
             base.OnCreate(bundle);
@@ -57,6 +60,8 @@ namespace BalizaFacil.Droid
             BluetoothService bluetooth = new BluetoothService();
             App.BluetoothStartedEnabled = bluetooth.IsEnabled;
             Location.RequestEnableGPS();
+
+            
 
             player = MediaPlayer.Create(this, Resource.Raw.Stop);
             Thread TurnOnAndConnect = new Thread(() =>
@@ -87,6 +92,7 @@ namespace BalizaFacil.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             //RequestPermissions(new string[] { Manifest.Permission.AccessCoarseLocation, Manifest.Permission.AccessFineLocation }, 0);
+            Xamarin.Essentials.Platform.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             Instance = this;
@@ -109,6 +115,32 @@ namespace BalizaFacil.Droid
             LoadApplication(new App());
         }
 
+        public async Task<PermissionStatus> CheckAndRequestLocationPermission()
+        {
+            var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
+
+            if (status == PermissionStatus.Granted)
+                return status;
+
+            if (status == PermissionStatus.Denied && DeviceInfo.Platform == DevicePlatform.iOS)
+            {
+                // Prompt the user to turn on in settings
+                // On iOS once a permission has been denied it may not be requested again from the application
+                return status;
+            }
+
+            if (Permissions.ShouldShowRationale<Permissions.LocationWhenInUse>())
+            {
+                // Prompt the user with additional information as to why the permission is needed
+            }
+
+            status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
+
+            return status;
+        }
+
+
+
         private void OnTaskSchedulerOnUnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs e)
         {
             App.Instance.UnhandledException("OnTaskSchedulerOnUnobservedTaskException", e.Exception);
@@ -125,11 +157,18 @@ namespace BalizaFacil.Droid
         }
 
 
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
+      /*  public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
         {
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             global::ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        } */
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
+        {
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
         public override void OnTrimMemory([GeneratedEnum] TrimMemory level)
