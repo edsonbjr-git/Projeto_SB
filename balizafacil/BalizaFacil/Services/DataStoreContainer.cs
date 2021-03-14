@@ -21,7 +21,7 @@ namespace BalizaFacil.Services
             {
                 if (_postStore == null)
                 {
-                    _postStore = new FirebaseDataStore<LogBaliza>(_firebaseAuthService, "logs");
+                    _postStore = new FirebaseDataStore<LogBaliza>(_firebaseAuthService, "balizas");
                 }
 
                 return _postStore;

@@ -43,8 +43,12 @@ namespace BalizaFacil.Library
                     logBaliza.Latitude = location.Latitude;
                     logBaliza.Lontitude = location.Longitude;
                     logBaliza.Altitude = location.Longitude;
+                    logBaliza.ModeloCelular = Xamarin.Essentials.DeviceInfo.Manufacturer + " - " + Xamarin.Essentials.DeviceInfo.Model;
+                    logBaliza.VersaoAndroid =  Xamarin.Essentials.DeviceInfo.VersionString;
+                    logBaliza.Inicio = DateTime.Now.TimeOfDay;
+                    logBaliza.Fim = DateTime.Now.AddHours(2).TimeOfDay;
 
-                    var result= await App.DataStoreContainer.LogBalizaStore.AddItemAsync(logBaliza);
+                   var result= await App.DataStoreContainer.LogBalizaStore.AddItemAsync(logBaliza);
 
 
 
