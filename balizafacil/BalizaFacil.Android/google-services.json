@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1073491856329",
+    "project_id": "balizafacil-16f54",
+    "storage_bucket": "balizafacil-16f54.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073491856329:android:dbfca7b6149bb69e87f618",
+        "android_client_info": {
+          "package_name": "br.com.balizafacil.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1073491856329-ka5vjkuifg006m5kk5sh8188dvr0qg4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW4czZ16MNNP38OQlIMCbHvRJVXW5b4mc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1073491856329-ka5vjkuifg006m5kk5sh8188dvr0qg4t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

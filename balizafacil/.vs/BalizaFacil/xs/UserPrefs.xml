@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{7D569D7B-179C-42AF-BC5E-5C0B66DB1C0A}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil/Library/LogAppCenter.cs">
+    <Files>
+      <File FileName="BalizaFacil/Services/FirebaseAuthService.cs" Line="1" Column="1" />
+      <File FileName="BalizaFacil/Services/FirebaseDataStore.cs" />
+      <File FileName="BalizaFacil/Services/FirebaseOfflineDataStore.cs" />
+      <File FileName="BalizaFacil/Services/DataStoreContainer.cs" />
+      <File FileName="BalizaFacil/Models/Log.cs" />
+      <File FileName="BalizaFacil/Library/LogAppCenter.cs" Line="46" Column="100" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BalizaFacil" expanded="True">
+            <Node name="BalizaFacil" expanded="True">
+              <Node name="Library" expanded="True">
+                <Node name="LogAppCenter.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>BalizaFacil.iOS/BalizaFacil.iOS.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.BalizaFacil.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.pixel_2_q_10_0_-_api_29" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
