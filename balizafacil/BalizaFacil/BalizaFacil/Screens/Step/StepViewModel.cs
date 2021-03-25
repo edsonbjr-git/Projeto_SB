@@ -116,7 +116,6 @@ namespace BalizaFacil.Screens
         public double Speed => DistanceManager.Instance.CurrentSpeed;
 
         public double DistanceLeft => Math.Round(totalDistance - distance, 0);
-        public double DistanceAux => Math.Round(distance, 0);  //sergio, AjusteMov
         public double distancia => distance;
         public AccelerationDirection Acceleration { get; set; }
         public AccelerationDirection directionAcceleration { get; set; }
@@ -235,8 +234,6 @@ namespace BalizaFacil.Screens
         }
         #endregion
         public bool curbTouch { get; set; }
-        private DateTime FinalizeSteptime = DateTime.Now; //sergio, AjusteMov
-        private int StepHistory = 1;
 
         public StepViewModel(AccelerationDirection acceleration, SteeringWheel direction, ApplicationStep currentStep, double distance, int totalSteps, int step, StepView view)
         {
@@ -721,11 +718,6 @@ namespace BalizaFacil.Screens
             {
                 timeLastMove = DateTime.Now;
                 FlowManager.delay = 7;
-
-                //sergio, AjusteMov - Salva o erro de posicao no momento que ele para apos mudar de step
-                //if (true || DateTime.Now.Subtract(FinalizeSteptime).TotalSeconds <7)
-                    //historic.diffDistance[StepHistory] = DistanceAux;
-
                 return true;
             }
             else
@@ -734,8 +726,8 @@ namespace BalizaFacil.Screens
 
         private void HistoricSave()
         {
-            StepHistory = (int)(CurrentStep - 10); //sergio, AjusteMov 
-            historic.diffDistance[StepHistory] = Speed; // DistanceLeft; //sergio, AjusteMov 
+
+            historic.diffDistance[(int)(CurrentStep - 10)] = DistanceLeft;
             historic.maxSpeed[(int)(CurrentStep - 10)] = maxSpeed;
             //parou1 = DistanceLeft;
             if (CurrentStep + 1 == ApplicationStep.Conclusion)
@@ -779,7 +771,6 @@ namespace BalizaFacil.Screens
         {
             try
             {
-                FinalizeSteptime = DateTime.Now; // sergio, AjusteMov
                 SoundService.StopBeep();
                 
                 DistanceManager.Instance.SpeedChanged -= OnSpeedChanged;
