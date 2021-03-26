@@ -23,7 +23,7 @@ namespace BalizaFacil.Droid
     {
         public static MainActivity Instance;
 
-        public MediaPlayer player;// = new MediaPlayer();
+        public MediaPlayer player;// = new MediaPlayer();     
         public void Playsong()
         {
             //if (player.IsPlaying)
