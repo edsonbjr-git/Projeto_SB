@@ -1,14 +1,18 @@
 ﻿<Properties StartupConfiguration="{7D569D7B-179C-42AF-BC5E-5C0B66DB1C0A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil.Android/MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs">
     <Files>
-      <File FileName="BalizaFacil.Android/MainActivity.cs" Line="26" Column="63" />
+      <File FileName="BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" Line="63" Column="41" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BalizaFacil" expanded="True">
             <Node name="BalizaFacil.Android" expanded="True">
-              <Node name="MainActivity.cs" selected="True" />
+              <Node name="Services" expanded="True">
+                <Node name="Bluetooth" expanded="True">
+                  <Node name="BluetoothService.cs" selected="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
@@ -20,7 +24,7 @@
     <String>BalizaFacil.iOS/BalizaFacil.iOS.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.BalizaFacil.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.pixel_2_q_10_0_-_api_29" />
+  <MonoDevelop.Ide.ItemProperties.BalizaFacil.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

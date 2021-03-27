@@ -19,6 +19,8 @@ namespace BalizaFacil
         public static bool sensorTime = false;
         public static DataStoreContainer DataStoreContainer { get; private set; }
 
+        public static LogBaliza CurrentLogBaliza { get; set; }
+
         public App()
         {
             App.Instance = this;
@@ -78,7 +80,7 @@ namespace BalizaFacil
                   typeof(Analytics), typeof(Crashes));
 
 
-            Task.Run(() =>
+            /*Task.Run(() =>
             {
 
                 Xamarin.Forms.Device.BeginInvokeOnMainThread(async () =>
@@ -86,7 +88,7 @@ namespace BalizaFacil
                             await LogAppCenter.TrackEventAsync("App Start", null);
                         });
             
-            });
+            });*/
         }
 
     }
