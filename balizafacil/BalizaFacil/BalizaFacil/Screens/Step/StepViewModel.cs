@@ -141,6 +141,7 @@ namespace BalizaFacil.Screens
         public static bool curbColisionTrue = false;
         public static double DistanciaTotal { get; set; }
         public double maxSpeed = 0f;
+        public int countSpeedHigherThanMax = 0; //sergio, VelLog
 
         #endregion
 
@@ -515,9 +516,19 @@ namespace BalizaFacil.Screens
                 //Console.Write("Speed/Distance: " + Math.Abs(Speed) +" / "+ distance + "\n\n");
                 //Debug.Print("Speed/Distance: " + Math.Abs(Speed) + " / " + distance + "\n\n");
                 if (Math.Abs(this.Speed) > Math.Abs(maxSpeed))  //sergio, AjusteMov
-                    //if (this.Speed > maxSpeed)
+                                                                //if (this.Speed > maxSpeed)
                 {
+                    //maxSpeed = Speed; //sergio, VelLog
+                    countSpeedHigherThanMax++;
+                }
+                else
+                    countSpeedHigherThanMax = 0; //sergio, VelLog
+
+                if (countSpeedHigherThanMax > 2) //sergio, VelLog
+                { 
                     maxSpeed = Speed;
+                    countSpeedHigherThanMax = 0; //sergio, VelLog
+
                 }
                 //Console.WriteLine($"Speed {Speed}, maxSpeed {maxSpeed}, CurrentSpeed {DistanceManager.Instance.CurrentSpeed}"); // sergio, AjusteMov
 

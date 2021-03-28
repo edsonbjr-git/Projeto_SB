@@ -58,7 +58,8 @@ namespace BalizaFacil.Models
            
             for(int c = 0 ; c < 6 ; c++)
             {
-                result += "Step " + c + " - Diff: " + diffDistance[c] + "\tVel. Maxima: " + Math.Round(Convert.ToDecimal(maxSpeed[c]), 2) + "\n";
+                //sergio logvel
+                result += "Step " + c + " - Diff: " + Math.Round(Convert.ToDecimal(diffDistance[c]), 2) + "\tVel. Maxima: " + Math.Round(Convert.ToDecimal(maxSpeed[c]), 2) + "\n";
             }
             return completed + "Dia: " + parkingTime +"\nTempo de baliza: " + timeDiff.Hours +":" + timeDiff.Minutes + ":"+timeDiff.Seconds + "\n"+ result + "\n";
         }
