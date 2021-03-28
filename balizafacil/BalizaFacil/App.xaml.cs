@@ -34,6 +34,7 @@ namespace BalizaFacil
         {
             Xamarin.Forms.Device.BeginInvokeOnMainThread(() =>
             {
+                Crashes.TrackError(exception);
                 MainPage.DisplayAlert(title, $"{exception?.Message}   (  {exception?.StackTrace}  )", "Close");
                 FlowManager.Instance.Reset();
                 FlowManager.Instance.ConnectToSensor();
