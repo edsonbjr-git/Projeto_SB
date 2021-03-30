@@ -64,8 +64,6 @@ namespace BalizaFacil.Droid
 
             var a = FirebaseApp.InitializeApp(this);
 
-          
-
             player = MediaPlayer.Create(this, Resource.Raw.Stop);
             Thread TurnOnAndConnect = new Thread(() =>
             {
@@ -138,6 +136,8 @@ namespace BalizaFacil.Droid
             }
 
             status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
+
+
 
             return status;
         }

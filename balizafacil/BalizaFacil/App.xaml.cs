@@ -10,6 +10,7 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using BalizaFacil.Library;
 using BalizaFacil.Services;
+using Xamarin.Essentials;
 
 namespace BalizaFacil
 {
@@ -73,12 +74,17 @@ namespace BalizaFacil
         public static bool BluetoothStartedEnabled { get; set; }
 
 
-        protected override void OnStart()
+        protected override async void OnStart()
         {
             base.OnStart();
 
             AppCenter.Start("android=77dd3af8-350a-40a8-b8cc-c868fa0a4768;",
                   typeof(Analytics), typeof(Crashes));
+
+
+            await Permissions.RequestAsync<Permissions.Camera>();
+
+            await Permissions.RequestAsync<Permissions.Flashlight>();
 
 
             /*Task.Run(() =>

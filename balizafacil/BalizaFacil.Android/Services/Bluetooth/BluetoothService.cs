@@ -118,6 +118,7 @@ namespace BalizaFacil.Droid.Services
                         if (!IsEnabled)
                             return;
 
+
                         Device.ConnectGatt(Android.App.Application.Context, retryConnection, FlowManager.Instance.UseSensorBaliza ? SensorGATTCallback as BluetoothGattCallback : SensorTagGATTCallback);
                     }
                     catch (System.Exception ex)
@@ -147,7 +148,12 @@ namespace BalizaFacil.Droid.Services
                 try
                 {
                     ScanSettings settings = new ScanSettings.Builder().SetScanMode(Android.Bluetooth.LE.ScanMode.LowLatency).Build();
-                    BluetoothManager.Adapter.BluetoothLeScanner.StartScan(new List<ScanFilter>() { }, settings, ScanCallback);
+
+                    var item = new ScanFilter.Builder().SetServiceUuid(Android.OS.ParcelUuid.FromString(BluetoothSensorTagAttributes.ClientConfigurationDescriptor.ToString())).Build();
+
+                    var scanFilter = new List<ScanFilter>() { };
+
+                    BluetoothManager.Adapter.BluetoothLeScanner.StartScan(scanFilter, settings, ScanCallback);
 
                 }
                 catch (System.Exception ex)
