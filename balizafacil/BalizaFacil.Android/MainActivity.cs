@@ -76,8 +76,14 @@ namespace BalizaFacil.Droid
                         Thread.Sleep(3000);
                     }
 
+                    if (!string.IsNullOrWhiteSpace(storage.GUID))
+                    {
+                        var adapter = CrossBluetoothLE.Current.Adapter;
+                        var aa = adapter.ConnectToKnownDeviceAsync(new Guid(storage.GUID)).Result;
+                    }
+
                     if (!string.IsNullOrWhiteSpace(storage.Address))
-                         bluetooth.ConnectToSensor(storage.Address, true);
+                        bluetooth.ConnectToSensor(storage.Address, true);
                 }
                 catch (System.Exception ex)
                 {

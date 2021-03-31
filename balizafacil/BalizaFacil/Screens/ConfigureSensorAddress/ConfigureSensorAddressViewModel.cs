@@ -14,6 +14,8 @@ namespace BalizaFacil.Screens
 {
     public class ConfigureSensorAddressViewModel
     {
+        private Plugin.BLE.Abstractions.Contracts.IAdapter adapter;
+
         public bool CloseOnComplete { get; private set; }
         public ICommand SearchByQRCode { get; internal set; }
         public ICommand SearchByBluetooth { get; internal set; }
@@ -43,10 +45,10 @@ namespace BalizaFacil.Screens
             BaseContentPage.Instance.PushModal(waitingView);
 
             bluetooth.DeviceDiscovered += OnDeviceDiscovered;
-            bluetooth.StartDiscoverDevices();
+            //bluetooth.StartDiscoverDevices();
 
             var ble = CrossBluetoothLE.Current;
-            var adapter = CrossBluetoothLE.Current.Adapter;
+            adapter = CrossBluetoothLE.Current.Adapter;
 
             adapter.ScanMode = Plugin.BLE.Abstractions.Contracts.ScanMode.LowLatency;
             adapter.DeviceDiscovered += Adapter_DeviceDiscovered;
@@ -55,7 +57,7 @@ namespace BalizaFacil.Screens
            
         }
 
-        private void Adapter_DeviceDiscovered(object sender, Plugin.BLE.Abstractions.EventArgs.DeviceEventArgs e)
+        private async void Adapter_DeviceDiscovered(object sender, Plugin.BLE.Abstractions.EventArgs.DeviceEventArgs e)
         {
             try
             {
@@ -67,6 +69,8 @@ namespace BalizaFacil.Screens
                 {
                     storage.GUID = e.Device.Id.ToString();
                     bluetooth.UpdateDevice(address, name);
+
+                    await adapter.ConnectToDeviceAsync(e.Device);
                 }
 
             }
