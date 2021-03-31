@@ -54,6 +54,9 @@ namespace BalizaFacil.Droid.Services
 
                 BluetoothManager = (BluetoothManager)Android.App.Application.Context.GetSystemService(Android.Content.Context.BluetoothService);
                 ScanCallback = new ScanCallback();
+
+             
+
                 ScanCallback.DeviceDiscovered += OnDeviceDiscovered;
 
                 SensorGATTCallback = new SensorGATTCallback();
@@ -149,11 +152,13 @@ namespace BalizaFacil.Droid.Services
                 {
                     ScanSettings settings = new ScanSettings.Builder().SetScanMode(Android.Bluetooth.LE.ScanMode.LowLatency).Build();
 
-                    var item = new ScanFilter.Builder().SetServiceUuid(Android.OS.ParcelUuid.FromString(BluetoothSensorTagAttributes.ClientConfigurationDescriptor.ToString())).Build();
+                    var item = new ScanFilter.Builder().SetServiceUuid(Android.OS.ParcelUuid.FromString("f000aa00-0451-4000-b000-000000000000")).Build();
 
-                    var scanFilter = new List<ScanFilter>() { };
+                    var scanFilter = new List<ScanFilter>() {  };
 
                     BluetoothManager.Adapter.BluetoothLeScanner.StartScan(scanFilter, settings, ScanCallback);
+
+                
 
                 }
                 catch (System.Exception ex)
@@ -169,7 +174,14 @@ namespace BalizaFacil.Droid.Services
             };
             DiscoverThread.Start();
         }
-        private void OnDeviceDiscovered(Android.Bluetooth.LE.ScanResult obj)
+
+        public void UpdateDevice(string id, string name)
+        {
+            DeviceDiscovered?.Invoke(new BluetoothDeviceInfo() { Name = name, Address = id });
+        }
+
+
+        public void OnDeviceDiscovered(Android.Bluetooth.LE.ScanResult obj)
         {
             try
             {

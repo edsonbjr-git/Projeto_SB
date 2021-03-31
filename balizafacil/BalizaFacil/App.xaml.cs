@@ -86,6 +86,9 @@ namespace BalizaFacil
 
             await Permissions.RequestAsync<Permissions.Flashlight>();
 
+            await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
+
+
 
             /*Task.Run(() =>
             {

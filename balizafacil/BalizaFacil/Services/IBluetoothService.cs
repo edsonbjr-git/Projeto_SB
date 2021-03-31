@@ -16,5 +16,7 @@ namespace BalizaFacil.Services
         void ResetSensorPeriod();
         void bluetoothActivate();
         void pairDevice();
+
+        void UpdateDevice(string id, string name);
     }
 }

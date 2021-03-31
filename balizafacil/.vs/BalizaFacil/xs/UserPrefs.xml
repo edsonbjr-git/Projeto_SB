@@ -1,27 +1,46 @@
 ﻿<Properties StartupConfiguration="{7D569D7B-179C-42AF-BC5E-5C0B66DB1C0A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil/Services/IBluetoothService.cs">
     <Files>
-      <File FileName="BalizaFacil/Screens/ConfigureSensorAddress/ConfigureSensorAddressViewModel.cs" Line="39" Column="65" />
-      <File FileName="BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" Line="157" Column="1" />
+      <File FileName="BalizaFacil/Screens/ConfigureSensorAddress/ConfigureSensorAddressViewModel.cs" Line="21" Column="28" />
+      <File FileName="BalizaFacil.Android/MainActivity.cs" Line="51" Column="19" />
+      <File FileName="BalizaFacil/Core/FlowManager.cs" Line="155" Column="16" />
+      <File FileName="BalizaFacil/App.xaml.cs" Line="98" Column="63" />
+      <File FileName="BalizaFacil/Services/LogDataStore.cs" Line="1" Column="1" />
+      <File FileName="BalizaFacil/Screens/Configuration/ConfigurationViewModel.cs" Line="1" Column="1" />
+      <File FileName="BalizaFacil/Screens/Configuration/ConfigurationView.cs" Line="1" Column="1" />
+      <File FileName="BalizaFacil/Screens/Conclusion/ConclusionViewModel.cs" Line="12" Column="17" />
+      <File FileName="BalizaFacil/Services/Services.cs" Line="21" Column="36" />
+      <File FileName="BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" Line="147" Column="28" />
+      <File FileName="BalizaFacil/Services/IBluetoothService.cs" Line="11" Column="22" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BalizaFacil" expanded="True">
             <Node name="BalizaFacil" expanded="True">
+              <Node name="Core" expanded="True" />
               <Node name="Screens" expanded="True">
+                <Node name="Conclusion" expanded="True" />
+                <Node name="Configuration" expanded="True" />
                 <Node name="ConfigureSensorAddress" expanded="True" />
               </Node>
+              <Node name="Services" expanded="True">
+                <Node name="IBluetoothService.cs" selected="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" />
             </Node>
             <Node name="BalizaFacil.Android" expanded="True">
               <Node name="Properties" expanded="True" />
               <Node name="Services" expanded="True">
-                <Node name="Bluetooth" expanded="True">
-                  <Node name="BluetoothService.cs" selected="True" />
-                </Node>
+                <Node name="Bluetooth" expanded="True" />
               </Node>
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>e.Device.BluetoothDevice</Value>
         </State>
       </Pad>
     </Pads>
@@ -31,15 +50,9 @@
     <String>BalizaFacil.iOS/BalizaFacil.iOS.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.BalizaFacil.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.ItemProperties.BalizaFacil.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.42e6e2bfbad9c818" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/iegamerica/Projects/Projeto_SB/balizafacil/BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" relfile="BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" line="111" column="1" />
-      <Breakpoint file="/Users/iegamerica/Projects/Projeto_SB/balizafacil/BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" relfile="BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" line="118" column="1" />
-      <Breakpoint file="/Users/iegamerica/Projects/Projeto_SB/balizafacil/BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" relfile="BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" line="180" column="1" />
-      <Breakpoint file="/Users/iegamerica/Projects/Projeto_SB/balizafacil/BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" relfile="BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" line="156" column="1" />
-      <Breakpoint file="/Users/iegamerica/Projects/Projeto_SB/balizafacil/BalizaFacil.Android/MainActivity.cs" relfile="BalizaFacil.Android/MainActivity.cs" line="120" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
