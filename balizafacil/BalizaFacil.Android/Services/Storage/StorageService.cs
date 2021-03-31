@@ -109,7 +109,38 @@ namespace BalizaFacil.Droid.Services
                 }
             }
         }
-        
+
+        public string GUID
+        {
+            get
+            {
+                try
+                {
+                    return AppSettings.GetValueOrDefault(nameof(GUID), string.Empty);
+                }
+                catch (System.Exception ex)
+                {
+                    string title = this.GetType().Name + " - " + System.Reflection.MethodBase.GetCurrentMethod().Name;
+                    BalizaFacil.App.Instance.UnhandledException(title, ex);
+                }
+
+                return "";
+            }
+            set
+            {
+                try
+                {
+                    AppSettings.AddOrUpdateValue(nameof(GUID), value);
+                    OnPropertyChanged();
+                }
+                catch (System.Exception ex)
+                {
+                    string title = this.GetType().Name + " - " + System.Reflection.MethodBase.GetCurrentMethod().Name;
+                    BalizaFacil.App.Instance.UnhandledException(title, ex);
+                }
+            }
+        }
+
         public string Address
         {
             get

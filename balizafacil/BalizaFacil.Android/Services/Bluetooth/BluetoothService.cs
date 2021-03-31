@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using BalizaFacil.Core;
 using BalizaFacil.Droid.Services.Bluetooth;
+using Plugin.BLE;
 
 [assembly: Dependency(typeof(BluetoothService))]
 namespace BalizaFacil.Droid.Services
@@ -111,7 +112,7 @@ namespace BalizaFacil.Droid.Services
         {
             try
             {
-                if (Device is null)
+               if (Device is null)
                     Device = BluetoothManager.Adapter.GetRemoteDevice(address);
 
                 Thread ReceiveSensorDataThread = new Thread(() =>

@@ -14,6 +14,7 @@ using Android.Media;
 using Android;
 using Xamarin.Essentials;
 using Firebase;
+using Plugin.BLE;
 
 namespace BalizaFacil.Droid
 {
@@ -74,8 +75,9 @@ namespace BalizaFacil.Droid
                         bluetooth.Enable();
                         Thread.Sleep(3000);
                     }
+
                     if (!string.IsNullOrWhiteSpace(storage.Address))
-                        bluetooth.ConnectToSensor(storage.Address, true);
+                         bluetooth.ConnectToSensor(storage.Address, true);
                 }
                 catch (System.Exception ex)
                 {

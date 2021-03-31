@@ -51,6 +51,8 @@ namespace BalizaFacil.Screens
             adapter.ScanMode = Plugin.BLE.Abstractions.Contracts.ScanMode.LowLatency;
             adapter.DeviceDiscovered += Adapter_DeviceDiscovered;
             await adapter.StartScanningForDevicesAsync();
+
+           
         }
 
         private void Adapter_DeviceDiscovered(object sender, Plugin.BLE.Abstractions.EventArgs.DeviceEventArgs e)
@@ -62,7 +64,10 @@ namespace BalizaFacil.Screens
                 var name = item.GetType().GetProperty("Name").GetValue(item).ToString();
 
                 if (name.ToLower().Contains("sensor"))
+                {
+                    storage.GUID = e.Device.Id.ToString();
                     bluetooth.UpdateDevice(address, name);
+                }
 
             }
             catch (Exception ef)
@@ -86,12 +91,11 @@ namespace BalizaFacil.Screens
             Sensor.Instance.StatusChanged += OnSensorStatusChanged;
             FlowManager.Instance.ConnectToSensor();
 
-            BaseContentPage.Instance.PopModal();
-
             Services.ServicesManager.Instance.SoundPlayer.PlaySound(VoiceType.SensorConnected);
-            //Task.Delay(5000);
+            Task.Delay(5000);
             //Services.ServicesManager.Instance.Utils.CloseApp();
-            
+
+            FlowManager.Instance.ChangeStep(ApplicationStep.Welcome);
 
 
         }

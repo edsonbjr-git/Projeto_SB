@@ -14,6 +14,8 @@ namespace BalizaFacil.Services
         bool FinalStepFree { get; set; }
         string TotalStops { get; set; }
         double reactionTime { get; set; }
+
+        string GUID { get; set; }
     }
 }
 
