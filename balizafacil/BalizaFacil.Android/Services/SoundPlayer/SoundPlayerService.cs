@@ -10,7 +10,6 @@ using BalizaFacil.Droid.Services;
 using BalizaFacil.Models;
 using BalizaFacil.Services;
 using Plugin.SimpleAudioPlayer;
-using Plugin.SimpleAudioPlayer.Abstractions;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(SoundPlayerService))]

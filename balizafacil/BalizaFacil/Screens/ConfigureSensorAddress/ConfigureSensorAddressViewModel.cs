@@ -43,7 +43,7 @@ namespace BalizaFacil.Screens
             BaseContentPage.Instance.PushModal(waitingView);
 
             bluetooth.DeviceDiscovered += OnDeviceDiscovered;
-            //  bluetooth.StartDiscoverDevices();
+            bluetooth.StartDiscoverDevices();
 
             var ble = CrossBluetoothLE.Current;
             var adapter = CrossBluetoothLE.Current.Adapter;
@@ -85,10 +85,13 @@ namespace BalizaFacil.Screens
             bluetooth.DeviceDiscovered -= OnDeviceDiscovered;
             Sensor.Instance.StatusChanged += OnSensorStatusChanged;
             FlowManager.Instance.ConnectToSensor();
+
+            BaseContentPage.Instance.PopModal();
+
             Services.ServicesManager.Instance.SoundPlayer.PlaySound(VoiceType.SensorConnected);
-            Task.Delay(5000);
-            Services.ServicesManager.Instance.Utils.CloseApp();
-            //BaseContentPage.Instance.PopModal();
+            //Task.Delay(5000);
+            //Services.ServicesManager.Instance.Utils.CloseApp();
+            
 
 
         }
