@@ -9,6 +9,7 @@ using BalizaFacil.Core;
 using BalizaFacil.Droid.Services;
 using BalizaFacil.Models;
 using BalizaFacil.Services;
+using Microsoft.AppCenter.Crashes;
 using Plugin.SimpleAudioPlayer;
 using Xamarin.Forms;
 
@@ -130,7 +131,9 @@ namespace BalizaFacil.Droid.Services
             catch (System.Exception ex)
             {
                 string title = this.GetType().Name + " - " + System.Reflection.MethodBase.GetCurrentMethod().Name;
-                BalizaFacil.App.Instance.UnhandledException(title, ex);
+                //  BalizaFacil.App.Instance.UnhandledException(title, ex);
+
+                Crashes.TrackError(ex);
             }
         }
         public void PlaySound(VoiceType type, double delayMilliseconds, ApplicationStep step)
