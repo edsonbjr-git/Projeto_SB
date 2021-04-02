@@ -148,7 +148,7 @@ namespace BalizaFacil.Core
 
             try
             {
-                Sound.StopSound();
+                //Sound.StopSound(); //sergio, melhorar funcionameno no xiaomi
                 if (string.IsNullOrWhiteSpace(Storage.Address))
                     return;
 
