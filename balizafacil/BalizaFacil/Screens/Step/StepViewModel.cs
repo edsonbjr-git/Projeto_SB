@@ -42,7 +42,7 @@ namespace BalizaFacil.Screens
                 double ReactionTime_s = Storage.reactionTime;
                 FilteredSpeed = alpha * FilteredSpeed + (1 - alpha) * Speed;
 
-                warningAdvancedOnMeters2 = Math.Abs(Speed) > 1 ? ((100 * ReactionTime_s) * Math.Abs(Speed)/3.6) : 0.0 * MarginHit; //Removendo 19.5 pq para v - 0 estava dando avanços nao fisicos
+                warningAdvancedOnMeters2 = Math.Abs(Speed) > 1 ? ((1 * ReactionTime_s) * Math.Abs(Speed)/3.6) : 0.0 * MarginHit; //Removendo 19.5 pq para v - 0 estava dando avanços nao fisicos
                 warningAdvancedOnMeters = 0 ;// Math.Abs(Speed) > 1 ? (20 * Math.Abs(Speed)) : 0.0 * MarginHit; //Removendo 19.5 pq para v - 0 estava dando avanços nao fisicos
                                              //Criar variavel para substituir 33.2 e colocar no configurationsView
 

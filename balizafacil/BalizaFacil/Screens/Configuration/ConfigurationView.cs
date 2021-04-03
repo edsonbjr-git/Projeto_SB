@@ -53,7 +53,7 @@ namespace BalizaFacil.Screens.Configuration
 
             StackLayout StopSteps = GetStepEntries("Pares por etapa", 
                                                 $"{nameof(ViewModel.Storage)}.{nameof(ViewModel.Storage.TotalStops)}",1);
-            StackLayout reactionTime = GetStepEntries("Tempo de reação em segundos",
+            StackLayout reactionTime = GetStepEntries("Tempo de reação em milisegundos",
                                                 $"{nameof(ViewModel.Storage)}.{nameof(ViewModel.Storage.reactionTime)}",2);
             StackLayout userName = GetStepEntries("Usuario",
                                                 $"{nameof(ViewModel.Storage)}.{nameof(ViewModel.Storage.Username)}",3);
