@@ -53,7 +53,7 @@ namespace BalizaFacil.Droid.Services
             {
                 try
                 {
-                    return AppSettings.GetValueOrDefault(nameof(reactionTime), 1.0);
+                    return AppSettings.GetValueOrDefault(nameof(reactionTime),40.0);
                 }
                 catch (System.Exception ex)
                 {
