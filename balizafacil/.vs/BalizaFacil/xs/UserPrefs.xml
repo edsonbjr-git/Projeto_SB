@@ -1,33 +1,18 @@
 ﻿<Properties StartupConfiguration="{7D569D7B-179C-42AF-BC5E-5C0B66DB1C0A}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil.Android/Services/SoundPlayer/SoundPlayerService.cs">
     <Files>
-      <File FileName="BalizaFacil/App.xaml.cs" Line="61" Column="38" />
-      <File FileName="BalizaFacil/Screens/WaitingSensorConnection/WaitingSensorConnectionView.cs" Line="1" Column="1" />
-      <File FileName="BalizaFacil/Screens/ConfigureSensorAddress/ConfigureSensorAddressViewModel.cs" Line="98" Column="63" />
-      <File FileName="BalizaFacil/Screens/Register/RegisterViewModel.cs" />
-      <File FileName="BalizaFacil/Screens/ChooseDirection/ChooseDirectionViewModel.cs" />
-      <File FileName="BalizaFacil/Core/FlowManager.cs" />
-      <File FileName="BalizaFacil.Android/Services/Bluetooth/BluetoothService.cs" />
-      <File FileName="BalizaFacil.Android/MainActivity.cs" Line="82" Column="69" />
-      <File FileName="BalizaFacil/Services/IStorageService.cs" />
-      <File FileName="BalizaFacil.Android/Services/Bluetooth/SensorGATTCallback.cs" />
-      <File FileName="BalizaFacil.Android/Services/SoundPlayer/SoundPlayerService.cs" Line="136" Column="40" />
+      <File FileName="BalizaFacil.Android/Services/SoundPlayer/SoundPlayerService.cs" Line="69" Column="1" />
+      <File FileName="BalizaFacil/Services/Services.cs" Line="33" Column="60" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BalizaFacil" expanded="True">
             <Node name="BalizaFacil" expanded="True">
-              <Node name="Core" expanded="True" />
-              <Node name="Screens" expanded="True">
-                <Node name="ChooseDirection" expanded="True" />
-                <Node name="Conclusion" expanded="True" />
-                <Node name="Configuration" expanded="True" />
-                <Node name="ConfigureSensorAddress" expanded="True" />
-                <Node name="Register" expanded="True" />
-                <Node name="WaitingSensorConnection" expanded="True" />
+              <Node name="Library" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="Audio" expanded="True" />
               </Node>
-              <Node name="Services" expanded="True" />
               <Node name="App.xaml" expanded="True" />
             </Node>
             <Node name="BalizaFacil.Android" expanded="True">
@@ -43,6 +28,9 @@
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -52,7 +40,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.BalizaFacil.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/iegamerica/Projects/Projeto_SB/balizafacil/BalizaFacil/App.xaml.cs" relfile="BalizaFacil/App.xaml.cs" line="35" column="1" />
+      <Breakpoint file="/Users/iegamerica/Projects/Projeto_SB/balizafacil/BalizaFacil.Android/Services/SoundPlayer/SoundPlayerService.cs" relfile="BalizaFacil.Android/Services/SoundPlayer/SoundPlayerService.cs" line="68" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

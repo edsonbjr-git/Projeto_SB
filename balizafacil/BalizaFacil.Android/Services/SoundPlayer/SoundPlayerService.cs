@@ -59,9 +59,18 @@ namespace BalizaFacil.Droid.Services
             //player = new MediaPlayer();
             for (VoiceType voice = VoiceType.ApproachingEnd; voice < VoiceType.None; voice++)
             {
-                players[(int)voice] = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-                players[(int)voice].Load(GetStreamFromFile(Enum.GetName(typeof(VoiceType), voice)));
+                try
+                {
+                    players[(int)voice] = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+                    players[(int)voice].Load(GetStreamFromFile(Enum.GetName(typeof(VoiceType), voice)));
+                }
+                catch(Exception ef)
+                {
+
+                }
             }
+
+
             timeLastPlay = DateTime.Now;
             defaultTime = timeLastPlay;
             //[sergio] comentei para fazer testes sem volume exagerado

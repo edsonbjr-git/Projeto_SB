@@ -25,9 +25,9 @@ namespace BalizaFacil
         public App()
         {
             App.Instance = this;
-            FlowManager.Instance.Start(this);
+           // FlowManager.Instance.Start(this);
 
-            DataStoreContainer = new DataStoreContainer(new FirebaseAuthService());
+           // DataStoreContainer = new DataStoreContainer(new FirebaseAuthService());
 
         }
 
@@ -88,6 +88,9 @@ namespace BalizaFacil
 
             await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
 
+
+            FlowManager.Instance.Start(this);
+            DataStoreContainer = new DataStoreContainer(new FirebaseAuthService());
 
 
             /*Task.Run(() =>
