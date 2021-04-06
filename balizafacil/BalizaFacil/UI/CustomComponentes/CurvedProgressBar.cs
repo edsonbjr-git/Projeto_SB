@@ -262,7 +262,7 @@ namespace BalizaFacil.UI
                    // 07/03/2021
                    // if (FlowManager.CurrentStep1 == ApplicationStep.ManeuverI || FlowManager.CurrentStep1 == ApplicationStep.ManeuverII) 
                    // sergio, AjusteMov, Ajuste verde todas etapas no modo treinamento
-                   if (StepViewModel.TrainingMode || (FlowManager.CurrentStep1 == ApplicationStep.ManeuverI || FlowManager.CurrentStep1 == ApplicationStep.ManeuverII))
+                   if (StepViewModel.TrainingMode || (FlowManager.CurrentStep1 == ApplicationStep.ManeuverI || FlowManager.CurrentStep1 != ApplicationStep.ManeuverII || FlowManager.CurrentStep1 == ApplicationStep.ManeuverIII || FlowManager.CurrentStep1 == ApplicationStep.ManeuverIV || FlowManager.CurrentStep1 == ApplicationStep.ManeuverV))
                         ProgressBackgroundGreen.AddArc(BaseRectangle, (float)(target-Angle_20cm), (float)(2*Angle_20cm));
                     else
                         ProgressBackgroundGreen.AddArc(BaseRectangle, (float)(target), (float)(Angle_20cm));

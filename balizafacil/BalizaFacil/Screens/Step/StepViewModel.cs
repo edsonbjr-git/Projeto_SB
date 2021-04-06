@@ -77,7 +77,7 @@ namespace BalizaFacil.Screens
 
                         if (Math.Abs(DistanceLeft) <= 50 + warningAdvancedOnMeters)
                             SoundService.ChangeBeepSpeed(BeepSpeed.VeryFast);
-                        if (Math.Abs(DistanceLeft) <= MarginHit && (CurrentStep == ApplicationStep.ManeuverI || CurrentStep == ApplicationStep.ManeuverII))
+                        if (Math.Abs(DistanceLeft) <= MarginHit && (CurrentStep == ApplicationStep.ManeuverI || CurrentStep == ApplicationStep.ManeuverII || CurrentStep == ApplicationStep.ManeuverIII || CurrentStep == ApplicationStep.ManeuverIV || CurrentStep == ApplicationStep.ManeuverV))
                             SoundService.ChangeBeepSpeed(BeepSpeed.InsideGreen);
                     }
                 }
@@ -266,7 +266,7 @@ namespace BalizaFacil.Screens
             MarginHit = (int)(totalDistance * 0.4);
             if (MarginHit > 20)
                 MarginHit = 20;
-            Margin = CurrentStep == ApplicationStep.ManeuverI || CurrentStep == ApplicationStep.ManeuverII ? MarginHit : 0;
+            Margin = CurrentStep == ApplicationStep.ManeuverI || CurrentStep == ApplicationStep.ManeuverII || CurrentStep == ApplicationStep.ManeuverIII || CurrentStep == ApplicationStep.ManeuverIV || CurrentStep == ApplicationStep.ManeuverV? MarginHit : 0;
 
             // sergio, AjusteMov, Ajuste verde todas etapas no modo treinamento, 07/03/2021
             if (StepViewModel.TrainingMode)
@@ -562,7 +562,7 @@ namespace BalizaFacil.Screens
                         HideModal(StepModal.WrongWay);
                     }
 
-                    if (CurrentStep == ApplicationStep.ManeuverI || CurrentStep == ApplicationStep.ManeuverII)
+                    if (CurrentStep == ApplicationStep.ManeuverI || CurrentStep == ApplicationStep.ManeuverII || CurrentStep == ApplicationStep.ManeuverIII || CurrentStep == ApplicationStep.ManeuverIV || CurrentStep == ApplicationStep.ManeuverV)
                     {
                         //Passou do ponto 1
                         if (DistanceLeft <= -Margin && !ModalType.HasFlag(StepModal.LeftWay) && DistanceLeft > -500 && (DateTime.Now.Subtract(timeLastHide_isPassedScreen).TotalSeconds > 2 || Math.Abs(DistanceLeft) > MarginHit + 10))
@@ -616,7 +616,7 @@ namespace BalizaFacil.Screens
                     }
 
                     //Area verde
-                    if (!Storage.TrainingMode && CurrentStep == ApplicationStep.ManeuverI && CurrentStep == ApplicationStep.ManeuverII)
+                    if (!Storage.TrainingMode && (CurrentStep == ApplicationStep.ManeuverI || CurrentStep == ApplicationStep.ManeuverII || CurrentStep == ApplicationStep.ManeuverIII || CurrentStep == ApplicationStep.ManeuverIV || CurrentStep == ApplicationStep.ManeuverV))
                     {
                         if ((Math.Abs(DistanceLeft) <= Margin) && !ModalType.HasFlag(StepModal.OkaySpot)) // && DateTime.Now.Subtract(timeLastTwinkle).TotalSeconds > 0.1)
                         {
@@ -664,7 +664,7 @@ namespace BalizaFacil.Screens
                         SoundService.PlaySound(VoiceTypeSimple, 2000, CurrentStep);//,true);
                     }
 
-                    if (CurrentStep == ApplicationStep.ManeuverI || CurrentStep == ApplicationStep.ManeuverII)
+                    if (CurrentStep == ApplicationStep.ManeuverI || CurrentStep == ApplicationStep.ManeuverII || CurrentStep == ApplicationStep.ManeuverIII || CurrentStep == ApplicationStep.ManeuverIV || CurrentStep == ApplicationStep.ManeuverV)
                     {
                         if (Math.Abs(DistanceLeft) <= Margin && !FinalizeStepCalled && carStoped_green())
                         {
@@ -777,7 +777,7 @@ namespace BalizaFacil.Screens
                 Sensor.Instance.StatusChanged -= OnSensorStatusChanged;
                 velocidade = DistanceManager.Instance.CurrentSpeed;
                 HistoricSave();
-                if (CurrentStep != ApplicationStep.ManeuverI || CurrentStep != ApplicationStep.ManeuverII)
+                if (CurrentStep != ApplicationStep.ManeuverI || CurrentStep != ApplicationStep.ManeuverII || CurrentStep == ApplicationStep.ManeuverIII || CurrentStep == ApplicationStep.ManeuverIV || CurrentStep == ApplicationStep.ManeuverV)
                     Thread.Sleep(50);
                 if (TrainingMode == true)
                 {
@@ -788,7 +788,7 @@ namespace BalizaFacil.Screens
                         SoundService.PlaySound(VoiceType.ConclusionStep);
                         ShowModal(StepModal.Conclusion);
                         DistanceManager.Instance.DistanceChanged -= OnDistanceChanged;
-                        if (CurrentStep != ApplicationStep.ManeuverI || CurrentStep != ApplicationStep.ManeuverII)
+                        if (CurrentStep != ApplicationStep.ManeuverI || CurrentStep != ApplicationStep.ManeuverII || CurrentStep == ApplicationStep.ManeuverIII || CurrentStep == ApplicationStep.ManeuverIV || CurrentStep == ApplicationStep.ManeuverV)
                             Thread.Sleep(400);
                         else
                             Thread.Sleep(400);
@@ -807,7 +807,7 @@ namespace BalizaFacil.Screens
                     SoundService.PlaySound(VoiceType.ConclusionStep);
                     ShowModal(StepModal.Conclusion);
                     DistanceManager.Instance.DistanceChanged -= OnDistanceChanged;
-                    if (CurrentStep != ApplicationStep.ManeuverI || CurrentStep != ApplicationStep.ManeuverII)
+                    if (CurrentStep != ApplicationStep.ManeuverI || CurrentStep != ApplicationStep.ManeuverII || CurrentStep == ApplicationStep.ManeuverIII || CurrentStep == ApplicationStep.ManeuverIV || CurrentStep == ApplicationStep.ManeuverV)
                         Thread.Sleep(400);
                     else
                         Thread.Sleep(400);
