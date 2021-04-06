@@ -18,7 +18,7 @@ using Plugin.BLE;
 
 namespace BalizaFacil.Droid
 {
-    [Activity(Label = "Baliza Fácil", Theme = "@style/Theme.Splash", MainLauncher = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
+    [Activity(Label = "BF Treinamento", Theme = "@style/Theme.Splash", MainLauncher = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
 
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {

@@ -214,22 +214,22 @@ namespace BalizaFacil.Core
                         //sergio, AjusteMov fim
 
                         //ServicesManager.Instance.SoundPlayer.StopSound();
-                        MainPage.PushView(new StepView(AccelerationDirection.Forward, SteeringWheel.CentrallyAligned, step, DistanceManager.GetManeuverLength(step, Direction), totalSteps, 0));
+                        MainPage.PushView(new StepView(AccelerationDirection.Forward, SteeringWheel.CentrallyAligned, step, 100, totalSteps, 0));
                         break;
                     case ApplicationStep.ManeuverII:
-                        MainPage.PushView(new StepView(AccelerationDirection.Backward, (SteeringWheel)Direction, step, DistanceManager.GetManeuverLength(step, Direction), totalSteps, 1));
+                        MainPage.PushView(new StepView(AccelerationDirection.Forward, SteeringWheel.CentrallyAligned, step, 100, totalSteps, 1));
                         break;
                     case ApplicationStep.ManeuverIII:
-                        MainPage.PushView(new StepView(AccelerationDirection.Backward, SteeringWheel.CentrallyAligned, step, DistanceManager.GetManeuverLength(step, Direction), totalSteps, 2));
+                        MainPage.PushView(new StepView(AccelerationDirection.Forward, SteeringWheel.CentrallyAligned, step, DistanceManager.GetManeuverLength(step, Direction), totalSteps, 2));
                         break;
                     case ApplicationStep.ManeuverIV:
-                        MainPage.PushView(new StepView(AccelerationDirection.Forward, (SteeringWheel)Direction, step, DistanceManager.GetManeuverLength(step, Direction), totalSteps, 3));
+                        MainPage.PushView(new StepView(AccelerationDirection.Backward, SteeringWheel.CentrallyAligned, step, DistanceManager.GetManeuverLength(step, Direction), totalSteps, 3));
                         break;
                     case ApplicationStep.ManeuverV:
-                        MainPage.PushView(new StepView(AccelerationDirection.Backward, (SteeringWheel)(Direction == Direction.Undefined ? Direction : Direction == Direction.Left ? Direction.Right : Direction.Left), step, DistanceManager.GetManeuverLength(step, Direction), totalSteps, 4));
+                        MainPage.PushView(new StepView(AccelerationDirection.Backward, SteeringWheel.CentrallyAligned, step, DistanceManager.GetManeuverLength(step, Direction), totalSteps, 4));
                         break;
                     case ApplicationStep.ManeuverVI:
-                        MainPage.PushView(new StepView(AccelerationDirection.Forward, (SteeringWheel)Direction, step, DistanceManager.GetManeuverLength(step, Direction), 5, 5));
+                        MainPage.PushView(new StepView(AccelerationDirection.Forward, SteeringWheel.CentrallyAligned, step, DistanceManager.GetManeuverLength(step, Direction), 5, 5));
                         break;
                     case ApplicationStep.Conclusion:
                         MainPage.PushView(new ConclusionView());
