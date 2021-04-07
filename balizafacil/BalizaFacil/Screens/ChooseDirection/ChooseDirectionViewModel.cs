@@ -15,7 +15,8 @@ namespace BalizaFacil.Screens
             {
                 //Só pra Teste  FlowManager.Instance.Direction = Direction.Left;
                 FlowManager.Instance.Direction = direction;
-                FlowManager.Instance.ChangeStep(ApplicationStep.MeasureSpace);
+                //FlowManager.Instance.ChangeStep(ApplicationStep.MeasureSpace); modo treinamento
+                FlowManager.Instance.ChangeStep(ApplicationStep.ManeuverI);
             });
         }
     }
