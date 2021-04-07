@@ -735,7 +735,7 @@ namespace BalizaFacil.Screens
                     //directionText.Text = $"V = {Math.Round(Convert.ToDecimal(DistanceManager.Instance.CurrentSpeed * 0 + StepViewModel.FilteredSpeed), 2)}";
                     directionText.HorizontalTextAlignment = TextAlignment.Center;
 
-                    if (FlowManager.CurrentStep1 == ApplicationStep.ManeuverIII && ViewModel.curbTouch)
+                    if (false) //modo treinamenoto (FlowManager.CurrentStep1 == ApplicationStep.ManeuverIII && ViewModel.curbTouch)
                     {
                     cabeOuNaoCabe = DistanceManager.Instance.CorrectOnCurbColisionTeste(Direction.Left, ApplicationStep.ManeuverIII);
                         if (cabeOuNaoCabe == 1)

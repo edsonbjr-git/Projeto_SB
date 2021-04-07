@@ -160,8 +160,8 @@ namespace BalizaFacil.Screens
         public StepView View { get; set; }
         public int Step { get; internal set; }
         public bool Rounded { get; set; }
-        public static int MarginHit = 20;
-        public static int Margin = 0;
+        public static int MarginHit = 30;
+        public static int Margin = 30;
         public int countStop = 0;
         //public int Stopeds = 1;
 
@@ -258,8 +258,9 @@ namespace BalizaFacil.Screens
             SoundService = ServicesManager.Instance.SoundPlayer;
             DistanceManager.Instance.ResetDistances();
             DistanceManager.Instance.DistanceChanged += OnDistanceChanged;
+           /* //modo treinamento
             if (CurrentStep == ApplicationStep.ManeuverIII && !BackStepCalled)
-                DistanceManager.Instance.SpeedChanged += OnSpeedChanged;
+                DistanceManager.Instance.SpeedChanged += OnSpeedChanged;*/
 
             Sensor.Instance.StatusChanged += OnSensorStatusChanged;
 
@@ -267,6 +268,29 @@ namespace BalizaFacil.Screens
             if (MarginHit > 20)
                 MarginHit = 20;
             Margin = CurrentStep == ApplicationStep.ManeuverI || CurrentStep == ApplicationStep.ManeuverII || CurrentStep == ApplicationStep.ManeuverIII || CurrentStep == ApplicationStep.ManeuverIV || CurrentStep == ApplicationStep.ManeuverV? MarginHit : 0;
+
+            switch (CurrentStep)
+            {
+                case ApplicationStep.ManeuverI:
+                    MarginHit = 40;
+                    break;
+                case ApplicationStep.ManeuverII:
+                    MarginHit = 30;
+                    break;
+                case ApplicationStep.ManeuverIII:
+                    MarginHit = 20;
+                    break;
+                case ApplicationStep.ManeuverIV:
+                    MarginHit = 40;
+                    break;
+                case ApplicationStep.ManeuverV:
+                    MarginHit = 30;
+                    break;
+                case ApplicationStep.ManeuverVI:
+                    MarginHit = 20;
+                    break;
+            }
+            Margin = MarginHit;
 
             // sergio, AjusteMov, Ajuste verde todas etapas no modo treinamento, 07/03/2021
             if (StepViewModel.TrainingMode)
@@ -359,7 +383,7 @@ namespace BalizaFacil.Screens
 
             NextRound = new Command(() =>
             {
-                Rounded = (DistanceLeft < 25 && DistanceLeft > -15) ? true : FlowManager.CurrentStep1 == ApplicationStep.ManeuverIII ? true : false;
+                Rounded = false;// modo treinamento (DistanceLeft < 25 && DistanceLeft > -15) ? true : FlowManager.CurrentStep1 == ApplicationStep.ManeuverIII ? true : false;
             });
 
             NextStep = new Command(() =>
@@ -659,7 +683,7 @@ namespace BalizaFacil.Screens
                             }
                         }
                     }
-                    if (carStoped_long() && Math.Abs(DistanceLeft) > Margin && (CurrentStep != ApplicationStep.ManeuverIII || (Progress < 59 || Progress > 100)))
+                    if (false) // modo treinamento (carStoped_long() && Math.Abs(DistanceLeft) > Margin && (CurrentStep != ApplicationStep.ManeuverIII || (Progress < 59 || Progress > 100)))
                     {
                         SoundService.PlaySound(VoiceTypeSimple, 2000, CurrentStep);//,true);
                     }
@@ -756,7 +780,7 @@ namespace BalizaFacil.Screens
 
         private void OnSpeedChanged(double speed)
         {
-            if (Progress >= 60 && DistanceLeft > Margin && !ModalType.HasFlag(StepModal.CurbTouch) && speed >= 0 && !isPassed)
+            if (false)// modo treinamento (Progress >= 60 && DistanceLeft > Margin && !ModalType.HasFlag(StepModal.CurbTouch) && speed >= 0 && !isPassed)
             {
                 curbTouch = true;
                 CurbColisionTime = DateTime.Now;
@@ -836,8 +860,9 @@ namespace BalizaFacil.Screens
         internal void StepEnded()
         {
             SoundService.StopBeep();
+            /*//modo treinamento
             if (CurrentStep == ApplicationStep.ManeuverIII)
-                DistanceManager.Instance.SpeedChanged -= OnSpeedChanged;
+                DistanceManager.Instance.SpeedChanged -= OnSpeedChanged;*/
 
             //ServicesManager.Instance.SoundPlayer.StopSound();
             Sensor.Instance.StatusChanged -= OnSensorStatusChanged;

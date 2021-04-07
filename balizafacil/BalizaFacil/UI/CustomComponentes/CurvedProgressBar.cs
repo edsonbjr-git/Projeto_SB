@@ -252,9 +252,12 @@ namespace BalizaFacil.UI
                     ProgressBackgroundRed.AddArc(BaseRectangle, ProgressPathStartAngleRed, 20);
 
                     //ta melhorando
-                    double Angle_20cm = StepViewModel.MarginHit * 76 / Distance;
-                    if (Angle_20cm > 30)
-                        Angle_20cm = 30;
+                    //double Angle_20cm = StepViewModel.MarginHit * 76 / Distance;
+                    double Angle_20cm = StepViewModel.MarginHit * 76 / StepViewModel.DistanciaTotal;
+                    /* //modo treinamento
+                     if (Angle_20cm > 30)
+                         Angle_20cm = 30;*/
+                    Angle_20cm = Angle_20cm / 1.25;
                     double target = 232 + (76 / 1.25); // angulo da barra preta (final da etapa)
                                                        //Este 1.25 é por causa q o progresso calcula foi multiplicado por 1.25
                                                        //Antes o 100% estava em 76 graus, agora ele irá para 76 / 1.25
@@ -262,10 +265,14 @@ namespace BalizaFacil.UI
                    // 07/03/2021
                    // if (FlowManager.CurrentStep1 == ApplicationStep.ManeuverI || FlowManager.CurrentStep1 == ApplicationStep.ManeuverII) 
                    // sergio, AjusteMov, Ajuste verde todas etapas no modo treinamento
-                   if (StepViewModel.TrainingMode || (FlowManager.CurrentStep1 == ApplicationStep.ManeuverI || FlowManager.CurrentStep1 != ApplicationStep.ManeuverII || FlowManager.CurrentStep1 == ApplicationStep.ManeuverIII || FlowManager.CurrentStep1 == ApplicationStep.ManeuverIV || FlowManager.CurrentStep1 == ApplicationStep.ManeuverV))
+                   
+                    /*// modo treinamento
+                    if (StepViewModel.TrainingMode || (FlowManager.CurrentStep1 == ApplicationStep.ManeuverI || FlowManager.CurrentStep1 == ApplicationStep.ManeuverII || FlowManager.CurrentStep1 == ApplicationStep.ManeuverIII || FlowManager.CurrentStep1 == ApplicationStep.ManeuverIV || FlowManager.CurrentStep1 == ApplicationStep.ManeuverV))
                         ProgressBackgroundGreen.AddArc(BaseRectangle, (float)(target-Angle_20cm), (float)(2*Angle_20cm));
                     else
-                        ProgressBackgroundGreen.AddArc(BaseRectangle, (float)(target), (float)(Angle_20cm));
+                        ProgressBackgroundGreen.AddArc(BaseRectangle, (float)(target), (float)(Angle_20cm));*/
+
+                    ProgressBackgroundGreen.AddArc(BaseRectangle, (float)(target - Angle_20cm), (float)(2 * Angle_20cm));
                     //onde começa , tamanho
                     //     286, 13
 
