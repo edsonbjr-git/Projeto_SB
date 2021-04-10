@@ -726,19 +726,66 @@ namespace BalizaFacil.Screens
 
         private void HistoricSave()
         {
+                    
+/*        // Inicio - variaveis para firebase
 
-            historic.diffDistance[(int)(CurrentStep - 10)] = DistanceLeft;
-            historic.maxSpeed[(int)(CurrentStep - 10)] = maxSpeed;
-            //parou1 = DistanceLeft;
-            if (CurrentStep + 1 == ApplicationStep.Conclusion)
-            {
-                historicModel.GetHistorical();
-                historic.parkingTime = DateTime.Now.ToString();
-                historic.timeEnd = DateTime.Now;
-                Console.WriteLine($"timeEnd {historic.timeEnd}"); // sergio, AjusteMov
-                historicModel.reports.Add(historic);
-                historicModel.SaveHistorical();
-            }
+            // Parametros associados a baliza como um todo
+            public string completed = "";
+            public DateTime timeStart;
+            public DateTime timeEnd { get; set; }
+            public string parkingTime = "";
+            // Parametros associados a baliza como um todo
+
+
+            // Parametros gravados para cada uma das 6 etapas
+            public double[] diffDistance;
+            public double[] maxSpeed;
+
+            public double[] ElapsedTimeStep;
+            public double[] StepEndSpeed;
+            public double[] StepInitialSpeed;
+            public double[] CurbTouch;
+            public string[] dummie_str1;
+            public string[] dummie_str2;
+            public string[] dummie_str3;
+            public double[] dummie_double1;
+            public double[] dummie_double2;
+            public double[] dummie_double3;
+            public DateTime[] dummie_time1;
+            // Parametros gravados para cada uma das 6 etapas
+
+        // Fim - variaveis para firebase*/
+
+
+        historic.diffDistance[(int)(CurrentStep - 10)] = DistanceLeft;
+        historic.maxSpeed[(int)(CurrentStep - 10)] = maxSpeed;
+
+
+        historic.ElapsedTimeStep[(int)(CurrentStep - 10)] = 10.0;
+        historic.StepEndSpeed[(int)(CurrentStep - 10)] = 11.0;
+        historic.StepInitialSpeed[(int)(CurrentStep - 10)] = 12;
+        historic.CurbTouch[(int)(CurrentStep - 10)] = 3;
+        historic.dummie_str1[(int)(CurrentStep - 10)] = "str1";
+        historic.dummie_str2[(int)(CurrentStep - 10)] = "str2";
+        historic.dummie_str3[(int)(CurrentStep - 10)] = "str3";
+        historic.dummie_double1[(int)(CurrentStep - 10)] = 91;
+        historic.dummie_double2[(int)(CurrentStep - 10)] = 92;
+        historic.dummie_double3[(int)(CurrentStep - 10)] = 93;
+        historic.dummie_time1[(int)(CurrentStep - 10)] = DateTime.Now;
+
+
+        //parou1 = DistanceLeft;
+        if (CurrentStep + 1 == ApplicationStep.Conclusion)
+        {
+            historicModel.GetHistorical();
+            historic.parkingTime = DateTime.Now.ToString();
+            historic.timeEnd = DateTime.Now;
+            Console.WriteLine($"timeEnd {historic.timeEnd}"); // sergio, AjusteMov
+            historicModel.reports.Add(historic);
+            historicModel.SaveHistorical();
+            // enviar para firebase daqui
+
+        }
         }
 
         private void FinalizeThreadStep()
