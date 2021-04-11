@@ -14,31 +14,31 @@ namespace BalizaFacil.Models
         // Jhonatan, todas essas variaveis devem ir para o firebase
         // Inicio - variaveis para firebase
 
-            // Parametros associados a baliza como um todo
-            public string completed = "";
-            public DateTime timeStart;
-            public DateTime timeEnd { get; set; }
-            public string parkingTime = "";
-            // Parametros associados a baliza como um todo
+        // Parametros associados a baliza como um todo
+        public string completed { get; set; } = "";
+        public DateTime timeStart { get; set; }
+        public DateTime timeEnd { get; set; }
+        public string parkingTime { get; set; } = "";
+        // Parametros associados a baliza como um todo
 
 
-            // Parametros gravados para cada uma das 6 etapas
-            public double[] diffDistance;
-            public double[] maxSpeed;
+        // Parametros gravados para cada uma das 6 etapas
+        public double[] diffDistance;
+        public double[] maxSpeed;
 
-            public double[] ElapsedTimeStep;
-            public double[] StepEndSpeed;
-            public double[] StepInitialSpeed;
-            public double[] CurbTouch;
-            public string[] dummie_str1;
-            public string[] dummie_str2;
-            public string[] dummie_str3;
-            public double[] dummie_double1;
-            public double[] dummie_double2;
-            public double[] dummie_double3;
-            public DateTime[] dummie_time1;
-            // Parametros gravados para cada uma das 6 etapas
-        
+        public double[] ElapsedTimeStep { get; set; }
+        public double[] StepEndSpeed { get; set; }
+        public double[] StepInitialSpeed { get; set; }
+        public double[] CurbTouch { get; set; }
+        public string[] dummie_str1 { get; set; }
+        public string[] dummie_str2 { get; set; }
+        public string[] dummie_str3 { get; set; }
+        public double[] dummie_double1 { get; set; }
+        public double[] dummie_double2 { get; set; }
+        public double[] dummie_double3 { get; set; }
+        public DateTime[] dummie_time1 { get; set; }
+        // Parametros gravados para cada uma das 6 etapas
+
         // Fim - variaveis para firebase
 
 
@@ -53,6 +53,10 @@ namespace BalizaFacil.Models
                 return instance;
             }
         }
+
+        public double Altitude { get; set; } = -1;
+        public double Latitude { get; set; } = -1;
+        public double Lontitude { get; set; } = -1;
 
         public Reports()
         {
@@ -81,12 +85,12 @@ namespace BalizaFacil.Models
             TimeSpan timeDiff = timeEnd.Subtract(timeStart);
             int diffTime = (int)timeDiff.TotalSeconds;
             string result = "";
-           
-            for(int c = 0 ; c < 6 ; c++)
+
+            for (int c = 0; c < 6; c++)
             {
                 result += "Step " + c + " - Diff: " + diffDistance[c] + "\tVel. Maxima: " + Math.Round(Convert.ToDecimal(maxSpeed[c]), 2) + "\n";
             }
-            return completed + "Dia: " + parkingTime +"\nTempo de baliza: " + timeDiff.Hours +":" + timeDiff.Minutes + ":"+timeDiff.Seconds + "\n"+ result + "\n";
+            return completed + "Dia: " + parkingTime + "\nTempo de baliza: " + timeDiff.Hours + ":" + timeDiff.Minutes + ":" + timeDiff.Seconds + "\n" + result + "\n";
         }
     }
 }

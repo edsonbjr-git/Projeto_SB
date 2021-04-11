@@ -9,6 +9,7 @@ namespace BalizaFacil.Services
     {
         private FirebaseAuthService _firebaseAuthService;
         private IDataStore<LogBaliza> _postStore;
+        private IDataStore<Reports> _reports;
 
         public DataStoreContainer(FirebaseAuthService firebaseAuthService)
         {
@@ -28,6 +29,19 @@ namespace BalizaFacil.Services
             }
         }
 
-        
+        public IDataStore<Reports> ReportsStore
+        {
+            get
+            {
+                if (_reports == null)
+                {
+                    _reports = new FirebaseDataStore<Reports>(_firebaseAuthService, "reports");
+                }
+
+                return _reports;
+            }
+        }
+
+
     }
 }

@@ -1,8 +1,15 @@
 ﻿<Properties StartupConfiguration="{7D569D7B-179C-42AF-BC5E-5C0B66DB1C0A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil.Android/Services/SoundPlayer/SoundPlayerService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil/Screens/Step/StepViewModel.cs">
     <Files>
       <File FileName="BalizaFacil.Android/Services/SoundPlayer/SoundPlayerService.cs" Line="69" Column="1" />
-      <File FileName="BalizaFacil/Services/Services.cs" Line="33" Column="60" />
+      <File FileName="BalizaFacil/Services/Services.cs" />
+      <File FileName="BalizaFacil/Models/Reports.cs" Line="59" Column="52" />
+      <File FileName="BalizaFacil/Screens/ReportView/ReportsViewModel.cs" Line="107" Column="28" />
+      <File FileName="BalizaFacil/Screens/Step/StepViewModel.cs" Line="795" Column="59" />
+      <File FileName="BalizaFacil/App.xaml.cs" Line="21" Column="36" />
+      <File FileName="BalizaFacil/Library/LogAppCenter.cs" Line="51" Column="20" />
+      <File FileName="BalizaFacil/Services/DataStoreContainer.cs" Line="35" Column="14" />
+      <File FileName="BalizaFacil.Android/MainActivity.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,21 +17,17 @@
           <Node name="BalizaFacil" expanded="True">
             <Node name="BalizaFacil" expanded="True">
               <Node name="Library" expanded="True" />
-              <Node name="Resources" expanded="True">
-                <Node name="Audio" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Screens" expanded="True">
+                <Node name="ReportView" expanded="True" />
+                <Node name="Step" expanded="True">
+                  <Node name="StepViewModel.cs" selected="True" />
+                </Node>
               </Node>
+              <Node name="Services" expanded="True" />
               <Node name="App.xaml" expanded="True" />
             </Node>
-            <Node name="BalizaFacil.Android" expanded="True">
-              <Node name="Properties" expanded="True" />
-              <Node name="Services" expanded="True">
-                <Node name="Bluetooth" expanded="True" />
-                <Node name="SoundPlayer" expanded="True">
-                  <Node name="SoundPlayerService.cs" selected="True" />
-                </Node>
-                <Node name="Storage" expanded="True" />
-              </Node>
-            </Node>
+            <Node name="BalizaFacil.Android" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -38,10 +41,9 @@
     <String>BalizaFacil.iOS/BalizaFacil.iOS.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.BalizaFacil.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.ItemProperties.BalizaFacil.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.42e6e2bfbad9c818" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/iegamerica/Projects/Projeto_SB/balizafacil/BalizaFacil/App.xaml.cs" relfile="BalizaFacil/App.xaml.cs" line="35" column="1" />
       <Breakpoint file="/Users/iegamerica/Projects/Projeto_SB/balizafacil/BalizaFacil.Android/Services/SoundPlayer/SoundPlayerService.cs" relfile="BalizaFacil.Android/Services/SoundPlayer/SoundPlayerService.cs" line="68" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

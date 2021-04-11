@@ -9,6 +9,7 @@ using BalizaFacil.Core;
 using BalizaFacil.Models;
 using BalizaFacil.Services;
 using BalizaFacil.UI;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace BalizaFacil.Screens
@@ -42,16 +43,16 @@ namespace BalizaFacil.Screens
                 double ReactionTime_s = Storage.reactionTime;
                 FilteredSpeed = alpha * FilteredSpeed + (1 - alpha) * Speed;
 
-                warningAdvancedOnMeters2 = Math.Abs(Speed) > 1 ? ((1 * ReactionTime_s) * Math.Abs(Speed)/3.6) : 0.0 * MarginHit; //Removendo 19.5 pq para v - 0 estava dando avanços nao fisicos
-                warningAdvancedOnMeters = 0 ;// Math.Abs(Speed) > 1 ? (20 * Math.Abs(Speed)) : 0.0 * MarginHit; //Removendo 19.5 pq para v - 0 estava dando avanços nao fisicos
-                                             //Criar variavel para substituir 33.2 e colocar no configurationsView
+                warningAdvancedOnMeters2 = Math.Abs(Speed) > 1 ? ((1 * ReactionTime_s) * Math.Abs(Speed) / 3.6) : 0.0 * MarginHit; //Removendo 19.5 pq para v - 0 estava dando avanços nao fisicos
+                warningAdvancedOnMeters = 0;// Math.Abs(Speed) > 1 ? (20 * Math.Abs(Speed)) : 0.0 * MarginHit; //Removendo 19.5 pq para v - 0 estava dando avanços nao fisicos
+                                            //Criar variavel para substituir 33.2 e colocar no configurationsView
 
                 //warningAdvancedOnMeters2 = 0;
                 //if (Math.Abs(Speed) > 1)
                 //warningAdvancedOnMeters2 = (Storage.valueSpeed * Math.Abs(Speed));
                 //else
                 //    warningAdvancedOnMeters2 = 0.0 * MarginHit; //Removendo 19.5 pq para v - 0 estava dando avanços nao fisicos
-                
+
 
                 if (warningAdvancedOnMeters < 0)
                     warningAdvancedOnMeters = 0;
@@ -88,7 +89,7 @@ namespace BalizaFacil.Screens
         DateTime timeLastMove_or_OutGreen { get; set; }
         DateTime timeLastPlayStop { get; set; }
         DateTime timeLastHide_isPassedScreen { get; set; }
-        
+
         private double _totalDistance { get; set; }
         private double totalDistance
         {
@@ -103,7 +104,7 @@ namespace BalizaFacil.Screens
             }
         }
 
-        
+
         public int countBackWay { get; set; }//Tirar essa variavel
         public static bool TrainingMode = false;
         IStorageService Storage => ServicesManager.Instance.Storage;
@@ -480,7 +481,7 @@ namespace BalizaFacil.Screens
                             return VoiceType.ContinueForward;
                         if (Math.Abs(DistanceLeft) > 40)
                             return VoiceType.ArrivingForward_short;
-                        countStop = 0; 
+                        countStop = 0;
                         return VoiceType.JustOneStepForward;
 
                 }
@@ -493,7 +494,7 @@ namespace BalizaFacil.Screens
         {
             if (status != SensorStatus.Connected && !ModalType.HasFlag(StepModal.SensorDisconnected))
             {
-                
+
                 ShowModal(StepModal.SensorDisconnected);
                 Thread.Sleep(2000);
                 FlowManager.Instance.Reset();
@@ -512,7 +513,7 @@ namespace BalizaFacil.Screens
                 //Console.Write("Speed/Distance: " + Math.Abs(Speed) +" / "+ distance + "\n\n");
                 //Debug.Print("Speed/Distance: " + Math.Abs(Speed) + " / " + distance + "\n\n");
                 if (Math.Abs(this.Speed) > Math.Abs(maxSpeed))  //sergio, AjusteMov
-                    //if (this.Speed > maxSpeed)
+                                                                //if (this.Speed > maxSpeed)
                 {
                     maxSpeed = Speed;
                 }
@@ -526,7 +527,7 @@ namespace BalizaFacil.Screens
                 if (this.distance > BiggestDistance)
                     BiggestDistance = distance;
 
-                
+
 
                 if (Storage.FinalStepFree && CurrentStep == (ApplicationStep)10 + FlowManager.totalSteps)
                 {
@@ -630,7 +631,7 @@ namespace BalizaFacil.Screens
                             HideModal(StepModal.OkaySpot);
                         }
                     }
-                    
+
 
                     #endregion
 
@@ -659,7 +660,7 @@ namespace BalizaFacil.Screens
                             }
                         }
                     }
-                    if (carStoped_long() && Math.Abs(DistanceLeft) > Margin && (!(CurrentStep == ApplicationStep.ManeuverIII || CurrentStep == ApplicationStep.ManeuverV )|| (Progress < 59 || Progress > 100)))
+                    if (carStoped_long() && Math.Abs(DistanceLeft) > Margin && (!(CurrentStep == ApplicationStep.ManeuverIII || CurrentStep == ApplicationStep.ManeuverV) || (Progress < 59 || Progress > 100)))
                     {
                         SoundService.PlaySound(VoiceTypeSimple, 2000, CurrentStep);//,true);
                     }
@@ -724,68 +725,88 @@ namespace BalizaFacil.Screens
                 return false;
         }
 
-        private void HistoricSave()
+        private async void HistoricSave()
         {
-                    
-/*        // Inicio - variaveis para firebase
 
-            // Parametros associados a baliza como um todo
-            public string completed = "";
-            public DateTime timeStart;
-            public DateTime timeEnd { get; set; }
-            public string parkingTime = "";
-            // Parametros associados a baliza como um todo
+            /*        // Inicio - variaveis para firebase
 
-
-            // Parametros gravados para cada uma das 6 etapas
-            public double[] diffDistance;
-            public double[] maxSpeed;
-
-            public double[] ElapsedTimeStep;
-            public double[] StepEndSpeed;
-            public double[] StepInitialSpeed;
-            public double[] CurbTouch;
-            public string[] dummie_str1;
-            public string[] dummie_str2;
-            public string[] dummie_str3;
-            public double[] dummie_double1;
-            public double[] dummie_double2;
-            public double[] dummie_double3;
-            public DateTime[] dummie_time1;
-            // Parametros gravados para cada uma das 6 etapas
-
-        // Fim - variaveis para firebase*/
+                        // Parametros associados a baliza como um todo
+                        public string completed = "";
+                        public DateTime timeStart;
+                        public DateTime timeEnd { get; set; }
+                        public string parkingTime = "";
+                        // Parametros associados a baliza como um todo
 
 
-        historic.diffDistance[(int)(CurrentStep - 10)] = DistanceLeft;
-        historic.maxSpeed[(int)(CurrentStep - 10)] = maxSpeed;
+                        // Parametros gravados para cada uma das 6 etapas
+                        public double[] diffDistance;
+                        public double[] maxSpeed;
+
+                        public double[] ElapsedTimeStep;
+                        public double[] StepEndSpeed;
+                        public double[] StepInitialSpeed;
+                        public double[] CurbTouch;
+                        public string[] dummie_str1;
+                        public string[] dummie_str2;
+                        public string[] dummie_str3;
+                        public double[] dummie_double1;
+                        public double[] dummie_double2;
+                        public double[] dummie_double3;
+                        public DateTime[] dummie_time1;
+                        // Parametros gravados para cada uma das 6 etapas
+
+                    // Fim - variaveis para firebase*/
 
 
-        /*historic.ElapsedTimeStep[(int)(CurrentStep - 10)] = 10.0;
-        historic.StepEndSpeed[(int)(CurrentStep - 10)] = 11.0;
-        historic.StepInitialSpeed[(int)(CurrentStep - 10)] = 12;
-        historic.CurbTouch[(int)(CurrentStep - 10)] = 3;
-        historic.dummie_str1[(int)(CurrentStep - 10)] = "str1";
-        historic.dummie_str2[(int)(CurrentStep - 10)] = "str2";
-        historic.dummie_str3[(int)(CurrentStep - 10)] = "str3";
-        historic.dummie_double1[(int)(CurrentStep - 10)] = 91;
-        historic.dummie_double2[(int)(CurrentStep - 10)] = 92;
-        historic.dummie_double3[(int)(CurrentStep - 10)] = 93;
-        historic.dummie_time1[(int)(CurrentStep - 10)] = DateTime.Now;*/
+            historic.diffDistance[(int)(CurrentStep - 10)] = DistanceLeft;
+            historic.maxSpeed[(int)(CurrentStep - 10)] = maxSpeed;
 
 
-        //parou1 = DistanceLeft;
-        if (CurrentStep + 1 == ApplicationStep.Conclusion)
-        {
-            historicModel.GetHistorical();
-            historic.parkingTime = DateTime.Now.ToString();
-            historic.timeEnd = DateTime.Now;
-            Console.WriteLine($"timeEnd {historic.timeEnd}"); // sergio, AjusteMov
-            historicModel.reports.Add(historic);
-            historicModel.SaveHistorical();
-            // enviar para firebase daqui
+            /*historic.ElapsedTimeStep[(int)(CurrentStep - 10)] = 10.0;
+            historic.StepEndSpeed[(int)(CurrentStep - 10)] = 11.0;
+            historic.StepInitialSpeed[(int)(CurrentStep - 10)] = 12;
+            historic.CurbTouch[(int)(CurrentStep - 10)] = 3;
+            historic.dummie_str1[(int)(CurrentStep - 10)] = "str1";
+            historic.dummie_str2[(int)(CurrentStep - 10)] = "str2";
+            historic.dummie_str3[(int)(CurrentStep - 10)] = "str3";
+            historic.dummie_double1[(int)(CurrentStep - 10)] = 91;
+            historic.dummie_double2[(int)(CurrentStep - 10)] = 92;
+            historic.dummie_double3[(int)(CurrentStep - 10)] = 93;
+            historic.dummie_time1[(int)(CurrentStep - 10)] = DateTime.Now;*/
 
-        }
+
+            //parou1 = DistanceLeft;
+            if (CurrentStep + 1 == ApplicationStep.Conclusion)
+            {
+                historicModel.GetHistorical();
+                historic.parkingTime = DateTime.Now.ToString();
+                historic.timeEnd = DateTime.Now;
+                Console.WriteLine($"timeEnd {historic.timeEnd}"); // sergio, AjusteMov
+              
+                // enviar para firebase daqui
+
+
+                var request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
+                var cts = new CancellationTokenSource();
+                var location = await Geolocation.GetLocationAsync(request, cts.Token);
+
+                if (location != null)
+                {
+                    historic.Latitude = location.Latitude;
+                    historic.Lontitude = location.Longitude;
+                    historic.Altitude = location.Longitude;
+
+                    Debug.WriteLine(historic.Latitude + " " + historic.Lontitude + " " + historic.Altitude);
+                }
+
+
+                var result = await App.DataStoreContainer.ReportsStore.AddItemAsync(historic);
+
+                historicModel.reports.Add(historic);
+                historicModel.SaveHistorical();
+
+                
+            }
         }
 
         private void FinalizeThreadStep()
@@ -822,7 +843,7 @@ namespace BalizaFacil.Screens
             try
             {
                 SoundService.StopBeep();
-                
+
                 DistanceManager.Instance.SpeedChanged -= OnSpeedChanged;
                 Sensor.Instance.StatusChanged -= OnSensorStatusChanged;
                 velocidade = DistanceManager.Instance.CurrentSpeed;
@@ -831,7 +852,7 @@ namespace BalizaFacil.Screens
                     Thread.Sleep(50);
                 if (TrainingMode == true)
                 {
-                    while (Rounded == false);
+                    while (Rounded == false) ;
 
                     if (Rounded == true)
                     {
@@ -869,7 +890,7 @@ namespace BalizaFacil.Screens
                             FlowManager.Instance.ChangeStep((ApplicationStep)(CurrentStep + 1));
                     });
                 }
-               
+
             }
             catch (System.Exception ex)
             {
