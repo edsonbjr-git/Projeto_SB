@@ -26,17 +26,17 @@ namespace BalizaFacil.Models
         public double[] diffDistance;
         public double[] maxSpeed;
 
-        public double[] ElapsedTimeStep { get; set; }
-        public double[] StepEndSpeed { get; set; }
-        public double[] StepInitialSpeed { get; set; }
-        public double[] CurbTouch { get; set; }
-        public string[] dummie_str1 { get; set; }
-        public string[] dummie_str2 { get; set; }
-        public string[] dummie_str3 { get; set; }
-        public double[] dummie_double1 { get; set; }
-        public double[] dummie_double2 { get; set; }
-        public double[] dummie_double3 { get; set; }
-        public DateTime[] dummie_time1 { get; set; }
+        public double[] ElapsedTimeStep { get; set; } = new double[6];
+        public double[] StepEndSpeed { get; set; } = new double[6];
+        public double[] StepInitialSpeed { get; set; } = new double[6];
+        public double[] CurbTouch { get; set; } = new double[6];
+        public string[] dummie_str1 { get; set; } = new string[6];
+        public string[] dummie_str2 { get; set; } = new string[6];
+        public string[] dummie_str3 { get; set; } = new string[6];
+        public double[] dummie_double1 { get; set; } = new double[6];
+        public double[] dummie_double2 { get; set; } = new double[6];
+        public double[] dummie_double3 { get; set; } = new double[6];
+        public DateTime[] dummie_time1 { get; set; } = new DateTime[6];
         // Parametros gravados para cada uma das 6 etapas
 
         // Fim - variaveis para firebase

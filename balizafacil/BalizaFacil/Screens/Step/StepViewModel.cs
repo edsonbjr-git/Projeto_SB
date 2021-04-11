@@ -762,7 +762,7 @@ namespace BalizaFacil.Screens
             historic.maxSpeed[(int)(CurrentStep - 10)] = maxSpeed;
 
 
-            /*historic.ElapsedTimeStep[(int)(CurrentStep - 10)] = 10.0;
+            historic.ElapsedTimeStep[(int)(CurrentStep - 10)] = 10.0;
             historic.StepEndSpeed[(int)(CurrentStep - 10)] = 11.0;
             historic.StepInitialSpeed[(int)(CurrentStep - 10)] = 12;
             historic.CurbTouch[(int)(CurrentStep - 10)] = 3;
@@ -772,7 +772,7 @@ namespace BalizaFacil.Screens
             historic.dummie_double1[(int)(CurrentStep - 10)] = 91;
             historic.dummie_double2[(int)(CurrentStep - 10)] = 92;
             historic.dummie_double3[(int)(CurrentStep - 10)] = 93;
-            historic.dummie_time1[(int)(CurrentStep - 10)] = DateTime.Now;*/
+            historic.dummie_time1[(int)(CurrentStep - 10)] = DateTime.Now;
 
 
             //parou1 = DistanceLeft;
