@@ -258,7 +258,7 @@ namespace BalizaFacil.Screens
             SoundService = ServicesManager.Instance.SoundPlayer;
             DistanceManager.Instance.ResetDistances();
             DistanceManager.Instance.DistanceChanged += OnDistanceChanged;
-            if (CurrentStep == ApplicationStep.ManeuverIII && !BackStepCalled)
+            if ((CurrentStep == ApplicationStep.ManeuverIII || CurrentStep == ApplicationStep.ManeuverV) && !BackStepCalled)
                 DistanceManager.Instance.SpeedChanged += OnSpeedChanged;
 
             Sensor.Instance.StatusChanged += OnSensorStatusChanged;
@@ -274,7 +274,7 @@ namespace BalizaFacil.Screens
 
             CurbColision = new Command(() =>
             {
-                if (CurrentStep == ApplicationStep.ManeuverIII)
+                if (CurrentStep == ApplicationStep.ManeuverIII || CurrentStep == ApplicationStep.ManeuverV)
                     DistanceManager.Instance.SpeedChanged -= OnSpeedChanged;
                 Sensor.Instance.StatusChanged -= OnSensorStatusChanged;
                 DistanceManager.Instance.DistanceChanged -= OnDistanceChanged;
@@ -347,7 +347,7 @@ namespace BalizaFacil.Screens
                 historicModel.reports.Add(historic);
                 historicModel.SaveHistorical();
                 DistanceManager.Instance.DistanceChanged -= OnDistanceChanged;
-                if (CurrentStep == ApplicationStep.ManeuverIII)
+                if (CurrentStep == ApplicationStep.ManeuverIII || CurrentStep == ApplicationStep.ManeuverV)
                     DistanceManager.Instance.SpeedChanged -= OnSpeedChanged;
                 Sensor.Instance.StatusChanged -= OnSensorStatusChanged;
                 SoundService.StopSound();
@@ -359,7 +359,7 @@ namespace BalizaFacil.Screens
 
             NextRound = new Command(() =>
             {
-                Rounded = (DistanceLeft < 25 && DistanceLeft > -15) ? true : FlowManager.CurrentStep1 == ApplicationStep.ManeuverIII ? true : false;
+                Rounded = (DistanceLeft < 25 && DistanceLeft > -15) ? true : (FlowManager.CurrentStep1 == ApplicationStep.ManeuverIII || FlowManager.CurrentStep1 == ApplicationStep.ManeuverV) ? true : false;
             });
 
             NextStep = new Command(() =>
@@ -659,7 +659,7 @@ namespace BalizaFacil.Screens
                             }
                         }
                     }
-                    if (carStoped_long() && Math.Abs(DistanceLeft) > Margin && (CurrentStep != ApplicationStep.ManeuverIII || (Progress < 59 || Progress > 100)))
+                    if (carStoped_long() && Math.Abs(DistanceLeft) > Margin && (!(CurrentStep == ApplicationStep.ManeuverIII || CurrentStep == ApplicationStep.ManeuverV )|| (Progress < 59 || Progress > 100)))
                     {
                         SoundService.PlaySound(VoiceTypeSimple, 2000, CurrentStep);//,true);
                     }
@@ -761,7 +761,7 @@ namespace BalizaFacil.Screens
         historic.maxSpeed[(int)(CurrentStep - 10)] = maxSpeed;
 
 
-        historic.ElapsedTimeStep[(int)(CurrentStep - 10)] = 10.0;
+        /*historic.ElapsedTimeStep[(int)(CurrentStep - 10)] = 10.0;
         historic.StepEndSpeed[(int)(CurrentStep - 10)] = 11.0;
         historic.StepInitialSpeed[(int)(CurrentStep - 10)] = 12;
         historic.CurbTouch[(int)(CurrentStep - 10)] = 3;
@@ -771,7 +771,7 @@ namespace BalizaFacil.Screens
         historic.dummie_double1[(int)(CurrentStep - 10)] = 91;
         historic.dummie_double2[(int)(CurrentStep - 10)] = 92;
         historic.dummie_double3[(int)(CurrentStep - 10)] = 93;
-        historic.dummie_time1[(int)(CurrentStep - 10)] = DateTime.Now;
+        historic.dummie_time1[(int)(CurrentStep - 10)] = DateTime.Now;*/
 
 
         //parou1 = DistanceLeft;
@@ -805,12 +805,15 @@ namespace BalizaFacil.Screens
         {
             if (Progress >= 60 && DistanceLeft > Margin && !ModalType.HasFlag(StepModal.CurbTouch) && speed >= 0 && !isPassed)
             {
-                curbTouch = true;
-                CurbColisionTime = DateTime.Now;
-                DistanceOnCurbTouch = distance;
-                ShowModal(StepModal.CurbTouch);
-                SoundService.StopSound();
-                SoundService.PlaySound(VoiceType.CurbTouch_complete);
+                if (CurrentStep == ApplicationStep.ManeuverIII || (CurrentStep == ApplicationStep.ManeuverV && Progress > 75))
+                {
+                    curbTouch = true;
+                    CurbColisionTime = DateTime.Now;
+                    DistanceOnCurbTouch = distance;
+                    ShowModal(StepModal.CurbTouch);
+                    SoundService.StopSound();
+                    SoundService.PlaySound(VoiceType.CurbTouch_complete);
+                }
             }
         }
 
@@ -883,7 +886,7 @@ namespace BalizaFacil.Screens
         internal void StepEnded()
         {
             SoundService.StopBeep();
-            if (CurrentStep == ApplicationStep.ManeuverIII)
+            if (CurrentStep == ApplicationStep.ManeuverIII || CurrentStep == ApplicationStep.ManeuverV)
                 DistanceManager.Instance.SpeedChanged -= OnSpeedChanged;
 
             //ServicesManager.Instance.SoundPlayer.StopSound();
