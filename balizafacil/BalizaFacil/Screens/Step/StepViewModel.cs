@@ -285,6 +285,8 @@ namespace BalizaFacil.Screens
                 {
                     try
                     {
+                        //FinalizedByCurbTouch = 1; // sergio toque guia no log, curb
+                        historic.CurbTouch[(int)(CurrentStep - 10)] = 1;
                         if (FlowManager.Instance.OnCurbColision())
                         {
                             HideModal(StepModal.CurbTouch);
@@ -356,6 +358,11 @@ namespace BalizaFacil.Screens
                 historic.Reset();
                 FlowManager.Instance.Reset();
                 FlowManager.Instance.ChangeStep(ApplicationStep.ChooseDirection);
+
+                // enviar para firebase daqui
+
+                //resetar parametros do log apos enviar
+                ResetLogParameters();
             });
 
             NextRound = new Command(() =>
@@ -765,7 +772,7 @@ namespace BalizaFacil.Screens
             historic.ElapsedTimeStep[(int)(CurrentStep - 10)] = 10.0;
             historic.StepEndSpeed[(int)(CurrentStep - 10)] = 11.0;
             historic.StepInitialSpeed[(int)(CurrentStep - 10)] = 12;
-            historic.CurbTouch[(int)(CurrentStep - 10)] = 3;
+            //historic.CurbTouch[(int)(CurrentStep - 10)] = 3;
             historic.dummie_str1[(int)(CurrentStep - 10)] = "str1";
             historic.dummie_str2[(int)(CurrentStep - 10)] = "str2";
             historic.dummie_str3[(int)(CurrentStep - 10)] = "str3";
@@ -805,8 +812,14 @@ namespace BalizaFacil.Screens
                 historicModel.reports.Add(historic);
                 historicModel.SaveHistorical();
 
-                
+                // reset parameters values
+                ResetLogParameters();
             }
+        }
+
+        private void ResetLogParameters()
+        {
+            historic.CurbTouch = new double[] { 0, 0, 0, 0, 0, 0 };
         }
 
         private void FinalizeThreadStep()
