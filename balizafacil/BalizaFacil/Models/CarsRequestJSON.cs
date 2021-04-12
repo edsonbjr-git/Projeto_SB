@@ -42,7 +42,7 @@ namespace BalizaFacil.Models
                 {
                     double rw = 0.57f * 0.543f; // Carro peugeot 408
                     Cars cars = new Cars();
-                    //margem = soma 2x no tamanho da vaga e subtrai na primeira etapa           
+                    /*//margem = soma 2x no tamanho da vaga e subtrai na primeira etapa           
                     //Options.Add(new Car(2, "Renault Clio H", 7,   rw,  563 + 20, -10, new ObservableCollection<double> { 205, 234, 250, 87, 154, 33 }, new ObservableCollection<double> { 175, 360, 250, 134, 100, 80 }));
                     cars.cars.Add(new Car(2, "Renault", "Clio H", 7, (rw * 225f / 250f), 567, -404, new ObservableCollection<double> { 159, 212, 237, 63, 133, 63 }, new ObservableCollection<double> { 159, 326, 237, 97, 86, 97 }));
                     cars.cars.Add(new Car(3, "Ford", "Fiesta", 7, (rw * 400f / 447f), 535, -404, new ObservableCollection<double> { 206, 180, 338, 60, 81, 63 }, new ObservableCollection<double> { 206, 257, 338, 86, 57, 71 }));
@@ -56,7 +56,9 @@ namespace BalizaFacil.Models
                     cars.cars.Add(new Car(9, "Fiat", "UNO Vivace 2012", 6.5, (rw * 300f / 340f), 521, 551, new ObservableCollection<double> { 191, 185, 264, 62, 110, 48, 176, 185, 283, 86, 144, 0 }, new ObservableCollection<double> { 191, 271, 264, 90, 75, 70, 176, 271, 283, 126, 99, 0 }));
                     cars.cars.Add(new Car(10, "Renault", "Logan", 7.5, (0.304655f), 575, 606, new ObservableCollection<double> { 202, 196, 259, 65, 115, 51, 185, 196, 278, 91, 151, 0 }, new ObservableCollection<double> { 202, 283, 259, 94, 80, 73, 185, 283, 278, 132, 104, 0 }));
                     //Até aqui
-                    cars.cars.Add(new Car(11, "Nissan", "March", 7, (rw * 300f / 271f), 518, -404, new ObservableCollection<double> { 194, 163, 276, 54, 102, 42 }, new ObservableCollection<double> { 194, 251, 276, 84, 66, 65 }));
+                    cars.cars.Add(new Car(11, "Nissan", "March", 7, (rw * 300f / 271f), 518, -404, new ObservableCollection<double> { 194, 163, 276, 54, 102, 42 }, new ObservableCollection<double> { 194, 251, 276, 84, 66, 65 }));*/
+                    
+                    cars.cars.Add(new Car(2, "Volkswagen", "Voyage 2017", 7, (rw * 300f / 271f), 518, -404, new ObservableCollection<double> { 11, 163, 276, 54, 102, 42 }, new ObservableCollection<double> { 11, 251, 276, 84, 66, 65 }));
                     Storage.Cars = cars;
                     
                 }
