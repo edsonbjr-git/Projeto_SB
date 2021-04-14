@@ -3,8 +3,7 @@
     <Files>
       <File FileName="BalizaFacil.Android/Services/SoundPlayer/SoundPlayerService.cs" Line="69" Column="1" />
       <File FileName="BalizaFacil/Services/Services.cs" />
-      <File FileName="BalizaFacil/Models/Reports.cs" Line="73" Column="23" />
-      <File FileName="BalizaFacil/Screens/Step/StepViewModel.cs" Line="365" Column="34" />
+      <File FileName="BalizaFacil/Screens/Step/StepViewModel.cs" Line="364" Column="56" />
       <File FileName="BalizaFacil/App.xaml.cs" />
       <File FileName="BalizaFacil/Library/LogAppCenter.cs" />
       <File FileName="BalizaFacil/Services/DataStoreContainer.cs" />
@@ -15,11 +14,13 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BalizaFacil" expanded="True">
-            <Node name="BalizaFacil" expanded="True" selected="True">
+            <Node name="BalizaFacil" expanded="True">
               <Node name="Core" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Screens" expanded="True">
-                <Node name="Step" expanded="True" />
+                <Node name="Step" expanded="True">
+                  <Node name="StepViewModel.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
             <Node name="BalizaFacil.Android" expanded="True">
