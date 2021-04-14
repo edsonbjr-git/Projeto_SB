@@ -55,9 +55,9 @@ namespace BalizaFacil.Screens
         }
         IStorageService Storage => ServicesManager.Instance.Storage;
 
-        public string ModeloCelular { get; internal set; }
-        public object MACSensor { get; internal set; }
-        public string VersaoAndroid { get; internal set; }
+        public string ModeloCelular { get; set; }
+        public string MACSensor { get; set; }
+        public string VersaoAndroid { get; set; }
 
         public void createPDF()
         {

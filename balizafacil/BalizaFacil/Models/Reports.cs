@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
+using Xamarin.Forms.Internals;
 
 namespace BalizaFacil.Models
 {
+    [Preserve(AllMembers = true)]
     [Serializable()]
     public class Reports
     {
@@ -57,6 +59,9 @@ namespace BalizaFacil.Models
         public double Altitude { get; set; } = -1;
         public double Latitude { get; set; } = -1;
         public double Lontitude { get; set; } = -1;
+        public string ModeloCelular { get; set; } = "N/A";
+        public string VersaoAndroid { get;  set; } = "N/A";
+        public string MACSensor { get;  set; } = "N/A";
 
         public Reports()
         {

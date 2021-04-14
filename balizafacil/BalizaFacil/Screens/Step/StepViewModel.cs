@@ -805,10 +805,10 @@ namespace BalizaFacil.Screens
 
         private async Task SaveLogFirebase()
         {
-            var storage = DependencyService.Get<IStorageService>();
-            historicModel.ModeloCelular = Xamarin.Essentials.DeviceInfo.Manufacturer + " - " + Xamarin.Essentials.DeviceInfo.Model;
-            historicModel.VersaoAndroid = Xamarin.Essentials.DeviceInfo.VersionString;
-            historicModel.MACSensor = storage?.Address;
+
+            historic.ModeloCelular = Xamarin.Essentials.DeviceInfo.Manufacturer + " - " + Xamarin.Essentials.DeviceInfo.Model;
+            historic.VersaoAndroid = Xamarin.Essentials.DeviceInfo.VersionString;
+            historic.MACSensor = Storage?.Address;
 
 
             var request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
