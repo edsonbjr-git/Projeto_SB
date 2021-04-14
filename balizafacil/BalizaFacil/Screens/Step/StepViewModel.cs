@@ -340,7 +340,7 @@ namespace BalizaFacil.Screens
                 CurbColisionThread.Start();
             });
 
-            Cancel = new Command(() =>
+            Cancel = new Command(async () =>
             {
                 historic.completed += "Não completado\n";
                 historicModel.GetHistorical();
@@ -360,6 +360,7 @@ namespace BalizaFacil.Screens
                 FlowManager.Instance.ChangeStep(ApplicationStep.ChooseDirection);
 
                 // enviar para firebase daqui
+                await SaveLogFirebase();
 
                 //resetar parametros do log apos enviar
                 ResetLogParameters();
@@ -785,29 +786,14 @@ namespace BalizaFacil.Screens
             //parou1 = DistanceLeft;
             if (CurrentStep + 1 == ApplicationStep.Conclusion)
             {
+
+
                 historicModel.GetHistorical();
                 historic.parkingTime = DateTime.Now.ToString();
                 historic.timeEnd = DateTime.Now;
                 Console.WriteLine($"timeEnd {historic.timeEnd}"); // sergio, AjusteMov
-              
-                // enviar para firebase daqui
 
-
-                var request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
-                var cts = new CancellationTokenSource();
-                var location = await Geolocation.GetLocationAsync(request, cts.Token);
-
-                if (location != null)
-                {
-                    historic.Latitude = location.Latitude;
-                    historic.Lontitude = location.Longitude;
-                    historic.Altitude = location.Longitude;
-
-                    Debug.WriteLine(historic.Latitude + " " + historic.Lontitude + " " + historic.Altitude);
-                }
-
-
-                var result = await App.DataStoreContainer.ReportsStore.AddItemAsync(historic);
+                await SaveLogFirebase();
 
                 historicModel.reports.Add(historic);
                 historicModel.SaveHistorical();
@@ -815,6 +801,31 @@ namespace BalizaFacil.Screens
                 // reset parameters values
                 ResetLogParameters();
             }
+        }
+
+        private async Task SaveLogFirebase()
+        {
+            var storage = DependencyService.Get<IStorageService>();
+            historicModel.ModeloCelular = Xamarin.Essentials.DeviceInfo.Manufacturer + " - " + Xamarin.Essentials.DeviceInfo.Model;
+            historicModel.VersaoAndroid = Xamarin.Essentials.DeviceInfo.VersionString;
+            historicModel.MACSensor = storage?.Address;
+
+
+            var request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
+            var cts = new CancellationTokenSource();
+            var location = await Geolocation.GetLocationAsync(request, cts.Token);
+
+            if (location != null)
+            {
+                historic.Latitude = location.Latitude;
+                historic.Lontitude = location.Longitude;
+                historic.Altitude = location.Longitude;
+
+                Debug.WriteLine(historic.Latitude + " " + historic.Lontitude + " " + historic.Altitude);
+            }
+
+
+            var result = await App.DataStoreContainer.ReportsStore.AddItemAsync(historic);
         }
 
         private void ResetLogParameters()
