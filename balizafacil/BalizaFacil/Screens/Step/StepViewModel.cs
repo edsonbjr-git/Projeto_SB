@@ -355,15 +355,16 @@ namespace BalizaFacil.Screens
                 Sensor.Instance.StatusChanged -= OnSensorStatusChanged;
                 SoundService.StopSound();
                 SoundService.StopBeep();
-                historic.Reset();
-                FlowManager.Instance.Reset();
-                FlowManager.Instance.ChangeStep(ApplicationStep.ChooseDirection);
-
+               
                 // enviar para firebase daqui
                 await SaveLogFirebase();
 
                 //resetar parametros do log apos enviar
                 ResetLogParameters();
+
+                historic.Reset();
+                FlowManager.Instance.Reset();
+                FlowManager.Instance.ChangeStep(ApplicationStep.ChooseDirection);
             });
 
             NextRound = new Command(() =>

@@ -1,23 +1,25 @@
 ﻿<Properties StartupConfiguration="{7D569D7B-179C-42AF-BC5E-5C0B66DB1C0A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil/Models/Reports.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BalizaFacil/Screens/Step/StepViewModel.cs">
     <Files>
       <File FileName="BalizaFacil.Android/Services/SoundPlayer/SoundPlayerService.cs" Line="69" Column="1" />
       <File FileName="BalizaFacil/Services/Services.cs" />
-      <File FileName="BalizaFacil/Models/Reports.cs" Line="13" Column="25" />
-      <File FileName="BalizaFacil/Screens/Step/StepViewModel.cs" Line="807" Column="1" />
+      <File FileName="BalizaFacil/Models/Reports.cs" Line="73" Column="23" />
+      <File FileName="BalizaFacil/Screens/Step/StepViewModel.cs" Line="365" Column="34" />
       <File FileName="BalizaFacil/App.xaml.cs" />
       <File FileName="BalizaFacil/Library/LogAppCenter.cs" />
       <File FileName="BalizaFacil/Services/DataStoreContainer.cs" />
-      <File FileName="BalizaFacil/Services/FirebaseDataStore.cs" Line="31" Column="1" />
+      <File FileName="BalizaFacil/Services/FirebaseDataStore.cs" />
       <File FileName="BalizaFacil/Services/LogDataStore.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BalizaFacil" expanded="True">
-            <Node name="BalizaFacil" expanded="True">
-              <Node name="Models" expanded="True">
-                <Node name="Reports.cs" selected="True" />
+            <Node name="BalizaFacil" expanded="True" selected="True">
+              <Node name="Core" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Screens" expanded="True">
+                <Node name="Step" expanded="True" />
               </Node>
             </Node>
             <Node name="BalizaFacil.Android" expanded="True">
@@ -29,9 +31,6 @@
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -39,7 +38,7 @@
     <String>BalizaFacil.iOS/BalizaFacil.iOS.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.BalizaFacil.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.42e6e2bfbad9c818" />
+  <MonoDevelop.Ide.ItemProperties.BalizaFacil.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/iegamerica/Projects/Projeto_SB/balizafacil/BalizaFacil.Android/Services/SoundPlayer/SoundPlayerService.cs" relfile="BalizaFacil.Android/Services/SoundPlayer/SoundPlayerService.cs" line="68" column="1" />
