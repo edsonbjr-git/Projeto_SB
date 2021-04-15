@@ -46,7 +46,7 @@ namespace BalizaFacil.Screens
         void OnSelectOptionClicked()
         {
             FlowManager.Instance.CarType = SelectedType;
-            Services.ServicesManager.Instance.Storage.Car = new Car(1, "dummie", "dummie", 8.5, 0.57f * 0.543f, 640, -10, new ObservableCollection<double> { 11, 11, 406, 51, 72, 41 }, new ObservableCollection<double> { 11, 11, 406, 77, 48, 62 });
+            Services.ServicesManager.Instance.Storage.Car = new Car(1, "Volkswagen", "Voyage 2020", 7, 0.291f, 623, -404, new ObservableCollection<double> { 142, 210, 227, 62, 127, 62 }, new ObservableCollection<double> { 142, 313, 227, 93, 86, 93 });
             FlowManager.Instance.ChangeStep(ApplicationStep.ConfigureSensor);
         }
 

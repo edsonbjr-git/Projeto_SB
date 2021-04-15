@@ -57,8 +57,8 @@ namespace BalizaFacil.Models
                     cars.cars.Add(new Car(10, "Renault", "Logan", 7.5, (0.304655f), 575, 606, new ObservableCollection<double> { 202, 196, 259, 65, 115, 51, 185, 196, 278, 91, 151, 0 }, new ObservableCollection<double> { 202, 283, 259, 94, 80, 73, 185, 283, 278, 132, 104, 0 }));
                     //Até aqui
                     cars.cars.Add(new Car(11, "Nissan", "March", 7, (rw * 300f / 271f), 518, -404, new ObservableCollection<double> { 194, 163, 276, 54, 102, 42 }, new ObservableCollection<double> { 194, 251, 276, 84, 66, 65 }));*/
-                    
-                    cars.cars.Add(new Car(2, "Volkswagen", "Voyage 2017", 7, (rw * 300f / 271f), 518, -404, new ObservableCollection<double> { 11, 163, 276, 54, 102, 42 }, new ObservableCollection<double> { 11, 251, 276, 84, 66, 65 }));
+
+                    cars.cars.Add(new Car(2, "Volkswagen", "Voyage 2020", 7, 0.291f, 623, -404, new ObservableCollection<double> { 142, 210, 227, 62, 127, 62 }, new ObservableCollection<double> { 142, 313, 227, 93, 86, 93 }));
                     Storage.Cars = cars;
                     
                 }
