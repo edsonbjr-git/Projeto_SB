@@ -431,7 +431,7 @@ namespace BalizaFacil.Screens
                         else if (acceleration_aux == AccelerationDirection.Forward)
                             return VoiceType.CentralizeForward;
                         else
-                            return VoiceType.CentralizeBackward; // sergio, teste audio VoiceType.CentralizeBackward1;
+                            return VoiceType.CentralizeBackward1; // sergio, teste audio VoiceType.CentralizeBackward1;
 
                     case SteeringWheel.TotallyLeft:
                         if (acceleration_aux == AccelerationDirection.Forward)
