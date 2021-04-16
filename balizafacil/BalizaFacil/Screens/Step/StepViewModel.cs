@@ -342,7 +342,7 @@ namespace BalizaFacil.Screens
 
             Cancel = new Command(async () =>
             {
-                historic.completed += "Não completado\n";
+                historic.completed = "Não completado\n";
                 historicModel.GetHistorical();
                 historic.parkingTime = DateTime.Now.ToString();
                 historic.timeEnd = DateTime.Now;
@@ -790,6 +790,7 @@ namespace BalizaFacil.Screens
 
 
                 historicModel.GetHistorical();
+                historic.completed = "Baliza completa\n";
                 historic.parkingTime = DateTime.Now.ToString();
                 historic.timeEnd = DateTime.Now;
                 Console.WriteLine($"timeEnd {historic.timeEnd}"); // sergio, AjusteMov
