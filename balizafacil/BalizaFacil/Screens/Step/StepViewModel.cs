@@ -310,7 +310,7 @@ namespace BalizaFacil.Screens
                         else
                         {
                             HideModal(StepModal.CurbTouch);
-                            Device.BeginInvokeOnMainThread(() =>
+                            Device.BeginInvokeOnMainThread(async () =>
                             {
                                 try
                                 {
@@ -319,6 +319,19 @@ namespace BalizaFacil.Screens
                                     FlowManager.Instance.ChangeStep(ApplicationStep.Conclusion);
                                     SoundService.StopSound();
                                     SoundService.PlaySound(VoiceType.Insuficient);
+
+                                    //firebase
+                                    historicModel.GetHistorical();
+                                    historic.completed = "Insuficiente Apos Toque\n";
+                                    historic.parkingTime = DateTime.Now.ToString();
+                                    historic.timeEnd = DateTime.Now;
+                                    await SaveLogFirebase();
+
+                                    historicModel.reports.Add(historic);
+                                    historicModel.SaveHistorical();
+
+                                    // reset parameters values
+                                    ResetLogParameters();
                                 }
                                 catch (System.Exception ex)
                                 {
@@ -342,7 +355,7 @@ namespace BalizaFacil.Screens
 
             Cancel = new Command(async () =>
             {
-                historic.completed = "Não completado\n";
+                historic.completed = "Não Completado\n";
                 historicModel.GetHistorical();
                 historic.parkingTime = DateTime.Now.ToString();
                 historic.timeEnd = DateTime.Now;
@@ -790,7 +803,7 @@ namespace BalizaFacil.Screens
 
 
                 historicModel.GetHistorical();
-                historic.completed = "Baliza completa\n";
+                historic.completed = "Baliza Completa\n";
                 historic.parkingTime = DateTime.Now.ToString();
                 historic.timeEnd = DateTime.Now;
                 Console.WriteLine($"timeEnd {historic.timeEnd}"); // sergio, AjusteMov
