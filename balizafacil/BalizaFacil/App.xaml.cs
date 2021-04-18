@@ -11,6 +11,7 @@ using Microsoft.AppCenter.Analytics;
 using BalizaFacil.Library;
 using BalizaFacil.Services;
 using Xamarin.Essentials;
+using System.Threading;
 
 namespace BalizaFacil
 {
@@ -36,9 +37,14 @@ namespace BalizaFacil
             Xamarin.Forms.Device.BeginInvokeOnMainThread(() =>
             {
                 Crashes.TrackError(exception);
-                MainPage.DisplayAlert(title, $"{exception?.Message}   (  {exception?.StackTrace}  )", "Close");
+                // MainPage.DisplayAlert(title, $"{exception?.Message}   (  {exception?.StackTrace}  )", "Close");
+                MainPage.DisplayAlert("Erro", exception.Message, "Fechar");
                 FlowManager.Instance.Reset();
                 FlowManager.Instance.ConnectToSensor();
+
+                //Chamar o metodo para fechar 
+                //Thread.Sleep(3000);
+                FlowManager.Instance.CloseApp();
             });
         }
 
